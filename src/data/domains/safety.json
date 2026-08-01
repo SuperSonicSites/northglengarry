@@ -1,0 +1,262 @@
+{
+  "id": "safety",
+  "slug": "public-safety",
+  "name": "Public safety",
+  "tagline": "Fire, policing, paramedics, and emergency management: who delivers each, at what depth, and at what cost.",
+  "primer": [
+    "Public safety in a rural Ontario township is delivered by four services owned at three different levels of government, and confusing them is the most common error in municipal debate. Fire is the township's. Policing is delivered by the Ontario Provincial Police and paid for by the township under a provincial billing model, which means council controls the bill's inputs only indirectly. Land ambulance is the United Counties'. Emergency management is a statutory township duty with a provincial compliance requirement.",
+    "The township's fire service is almost certainly a volunteer or composite service, and that fact shapes every number in this domain. A volunteer service does not have crews sitting in a station waiting; firefighters respond from home or work to the station and then to the call. Response time therefore has a component — turnout — that a career service does not have, and comparing a volunteer service's response time to a career service's benchmark measures the staffing model rather than the service's performance.",
+    "Ontario Regulation 378/18 requires every municipality to complete a community risk assessment and to use it in determining the services it provides. That document, and the fire master plan built from it, is where council's chosen depth of response is written down. It is the only fair benchmark for the service, because it is the standard council itself set. Where a response time is shown in this domain, what is measured — from dispatch, from notification, from turnout — is stated beside it, since the same service can produce very different numbers under different definitions.",
+    "Volunteer recruitment and retention is the leading indicator for the entire fire service. Apparatus can be bought and stations can be built; a roster cannot be purchased. Roster size, and the number of firefighters actually available for a weekday daytime call, are different figures, and the second is the one that determines what happens on a Tuesday morning.",
+    "Policing cost is the largest single public safety line in most rural township budgets and the one over which council has the least direct control. Under the provincial billing model, a municipality's bill is driven by a base cost per property and a calls-for-service component, both calculated provincially. Council can influence the second slowly and cannot change the first. Detachment statistics cover the detachment's service area, which typically spans several municipalities and does not match the township boundary.",
+    "Apparatus replacement is the one place in this domain where the township has full control and a long horizon. Fire apparatus has a defined service life, replacement is expensive, and the funded status of the replacement schedule connects directly to the reserve balances in the financial domain."
+  ],
+  "tierSplit": [
+    { "item": "Fire suppression, prevention, and rescue", "owner": "township", "note": "Township owns the service, the stations, and the apparatus, and sets the level of service." },
+    { "item": "Policing", "owner": "shared", "note": "Delivered by the OPP, paid for by the township under the provincial billing model. Confirm whether the township has a police services board and its composition." },
+    { "item": "Land ambulance and paramedic services", "owner": "county", "note": "SDG delivers paramedic services county-wide and sets the council-approved response time standard." },
+    { "item": "Emergency management programme", "owner": "township", "note": "Statutory township duty under the Emergency Management and Civil Protection Act, with annual compliance filed provincially." },
+    { "item": "911 dispatch", "owner": "shared", "note": "Confirm the current dispatch arrangement and which body holds the agreement." },
+    { "item": "Fire code enforcement", "owner": "township", "note": "Delivered through the fire service under the Fire Protection and Prevention Act." }
+  ],
+  "gaps": [
+    "Response time may not be recorded or reported at all. Where it is, confirm the measurement definition before comparing any two years — a change in dispatch software or reporting practice can move the figure without anything changing on the ground.",
+    "Daytime availability of volunteer firefighters is rarely reported even where roster size is. It is the more decision-relevant figure and may have to be requested from the fire chief directly.",
+    "Detachment-level policing statistics cover a service area larger than the township. Township-level crime statistics may not exist in publishable form.",
+    "Paramedic response time is reported county-wide by SDG. A township-level split may be obtainable but is not routinely published."
+  ],
+  "sourceIds": [
+    "fire-annual",
+    "fire-master-plan",
+    "ofm-statistics",
+    "police-contract",
+    "emergency-plan",
+    "sdg-paramedic",
+    "amp",
+    "council-agendas"
+  ],
+  "lastUpdated": "2026-08-01",
+  "indicators": [
+    {
+      "id": "fire-incidents",
+      "name": "Fire service incidents, all types",
+      "unit": "incidents",
+      "format": "number",
+      "geography": "Township of North Glengarry fire service area",
+      "tier": "township",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Total incidents responded to during the year across all incident types, including medical assist, motor vehicle collision, alarm, and fire. Structure fires are a small minority of any modern fire service's call volume; the composition is in the detail table.",
+      "series": [
+        { "period": "2020", "value": 214, "source": { "sourceId": "fire-annual", "locator": "Incident summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 236, "source": { "sourceId": "fire-annual", "locator": "Incident summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 258, "source": { "sourceId": "fire-annual", "locator": "Incident summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 271, "source": { "sourceId": "fire-annual", "locator": "Incident summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 289, "source": { "sourceId": "fire-annual", "locator": "Incident summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "volunteer-roster",
+      "name": "Volunteer firefighter roster",
+      "unit": "firefighters",
+      "format": "number",
+      "geography": "Township of North Glengarry fire service",
+      "tier": "township",
+      "polarity": "higher-is-favourable",
+      "headline": true,
+      "definition": "Number of volunteer firefighters on the roster at year end across all stations. Roster size is not the same as the number available to respond to a given call, particularly on weekdays. Where an established complement exists it is shown as the target.",
+      "series": [
+        { "period": "2020", "value": 62, "source": { "sourceId": "fire-annual", "locator": "Roster" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 58, "source": { "sourceId": "fire-annual", "locator": "Roster" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 55, "source": { "sourceId": "fire-annual", "locator": "Roster" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 53, "source": { "sourceId": "fire-annual", "locator": "Roster" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 49, "source": { "sourceId": "fire-annual", "locator": "Roster" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "target": {
+        "value": 65,
+        "label": "Established complement",
+        "source": { "sourceId": "fire-master-plan", "locator": "Staffing" },
+        "provenance": "sample"
+      },
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "fire-response-time",
+      "name": "Fire response time, 90th percentile",
+      "unit": "minutes",
+      "format": "number1",
+      "geography": "Township of North Glengarry fire service area",
+      "tier": "township",
+      "tierNote": "Township service. Response performance reflects a volunteer or composite staffing model chosen by council.",
+      "polarity": "lower-is-favourable",
+      "definition": "Elapsed time from dispatch notification to arrival of the first apparatus on scene, at the 90th percentile. Measured from dispatch, which excludes call-taking time and includes turnout. This definition must accompany the figure: a service measuring from a different start point will produce a different number for identical performance.",
+      "methodology": "Ninetieth percentile rather than average, because the average conceals the long tail and it is the tail that determines outcome. Comparison against any national standard designed for career services would measure the staffing model rather than the service; the applicable benchmark is the depth of response council adopted in the fire master plan.",
+      "series": [
+        { "period": "2021", "value": 14.8, "source": { "sourceId": "fire-annual", "locator": "Response performance" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2022", "value": 15.2, "source": { "sourceId": "fire-annual", "locator": "Response performance" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2023", "value": 15.9, "source": { "sourceId": "fire-annual", "locator": "Response performance" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2024", "value": 16.4, "source": { "sourceId": "fire-annual", "locator": "Response performance" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "policing-cost",
+      "name": "Policing cost to the township",
+      "unit": "$",
+      "format": "currency",
+      "geography": "Township of North Glengarry",
+      "tier": "shared",
+      "tierNote": "Service delivered by the OPP under the provincial billing model; cost borne by the township levy.",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Annual amount billed to the township for policing services, as recorded in the budget and audited statements. Comprises a base cost driven by property count and a calls-for-service component, both calculated provincially.",
+      "series": [
+        { "period": "2020", "value": 2080000, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 2140000, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 2210000, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 2360000, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 2540000, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "policing-cost-per-property",
+      "name": "Policing cost per property",
+      "unit": "$",
+      "format": "currency2",
+      "geography": "Township of North Glengarry",
+      "tier": "shared",
+      "polarity": "neutral",
+      "definition": "Annual policing cost divided by the number of properties used in the provincial billing calculation. Shown because the total moves with property count as well as with cost, and the two causes are not distinguishable from the total alone.",
+      "series": [
+        { "period": "2020", "value": 358.6, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2021", "value": 366.4, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2022", "value": 375.9, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2023", "value": 398.6, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2024", "value": 425.1, "source": { "sourceId": "police-contract", "locator": "Annual billing statement" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "apparatus-past-life",
+      "name": "Fire apparatus past recommended service life",
+      "unit": "units",
+      "format": "number",
+      "geography": "Township of North Glengarry fire service",
+      "tier": "township",
+      "polarity": "lower-is-favourable",
+      "definition": "Count of front-line fire apparatus operating beyond the service life stated in the apparatus replacement schedule. Apparatus age can affect insurance grading for the properties the service protects, which is a consequence outside the township's budget.",
+      "series": [
+        { "period": "2020", "value": 1, "source": { "sourceId": "amp", "locator": "Fire apparatus inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 1, "source": { "sourceId": "amp", "locator": "Fire apparatus inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 2, "source": { "sourceId": "amp", "locator": "Fire apparatus inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 2, "source": { "sourceId": "amp", "locator": "Fire apparatus inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 3, "source": { "sourceId": "amp", "locator": "Fire apparatus inventory" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    }
+  ],
+  "tables": [
+    {
+      "id": "incidents-by-type",
+      "title": "Fire service incidents by type",
+      "description": "Composition of call volume. Growth in medical assist and motor vehicle calls rather than in fires is the pattern in most Ontario services, and it changes what training, equipment, and staffing the service actually needs.",
+      "geography": "Township of North Glengarry fire service area",
+      "tier": "township",
+      "columns": [
+        { "key": "type", "label": "Incident type", "align": "left" },
+        { "key": "y2022", "label": "2022", "format": "number", "align": "right" },
+        { "key": "y2023", "label": "2023", "format": "number", "align": "right" },
+        { "key": "y2024", "label": "2024", "format": "number", "align": "right" }
+      ],
+      "rows": [
+        { "type": "Structure fire", "y2022": 18, "y2023": 16, "y2024": 21 },
+        { "type": "Outdoor and vehicle fire", "y2022": 24, "y2023": 27, "y2024": 25 },
+        { "type": "Medical assist", "y2022": 78, "y2023": 86, "y2024": 97 },
+        { "type": "Motor vehicle collision", "y2022": 46, "y2023": 49, "y2024": 54 },
+        { "type": "Alarm, no fire", "y2022": 52, "y2023": 51, "y2024": 48 },
+        { "type": "Rescue and other", "y2022": 40, "y2023": 42, "y2024": 44 }
+      ],
+      "source": { "sourceId": "fire-annual", "locator": "Incident summary by type" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample"
+    },
+    {
+      "id": "apparatus-inventory",
+      "title": "Apparatus and major equipment: age, replacement, funded status",
+      "description": "Funded status answers whether a reserve balance exists to cover the replacement when it falls due. An unfunded replacement is a future levy increase, a future debenture, or a deferral.",
+      "geography": "Township of North Glengarry fire service",
+      "tier": "township",
+      "columns": [
+        { "key": "unit", "label": "Unit", "align": "left" },
+        { "key": "station", "label": "Station", "align": "left" },
+        { "key": "year", "label": "Year", "align": "left" },
+        { "key": "life", "label": "Service life (yrs)", "format": "number", "align": "right" },
+        { "key": "due", "label": "Replacement due", "align": "left" },
+        { "key": "cost", "label": "Est. replacement", "format": "currency", "align": "right" },
+        { "key": "funded", "label": "Funded status", "align": "left" }
+      ],
+      "rows": [
+        { "unit": "Pumper 1", "station": "North", "year": "2004", "life": 20, "due": "Overdue", "cost": 850000, "funded": "Approved, not ordered" },
+        { "unit": "Pumper 2", "station": "South", "year": "2011", "life": 20, "due": "2031", "cost": 900000, "funded": "Partially reserved" },
+        { "unit": "Tanker 1", "station": "North", "year": "2002", "life": 25, "due": "2027", "cost": 620000, "funded": "Not reserved" },
+        { "unit": "Tanker 2", "station": "South", "year": "2015", "life": 25, "due": "2040", "cost": 640000, "funded": "Partially reserved" },
+        { "unit": "Rescue 1", "station": "North", "year": "2009", "life": 20, "due": "2029", "cost": 480000, "funded": "Partially reserved" },
+        { "unit": "Aerial", "station": "North", "year": "1998", "life": 25, "due": "Overdue", "cost": 1600000, "funded": "Not reserved" },
+        { "unit": "Self-contained breathing apparatus fleet", "station": "All", "year": "2014", "life": 15, "due": "2029", "cost": 310000, "funded": "Not reserved" }
+      ],
+      "source": { "sourceId": "amp", "locator": "Fire apparatus replacement schedule" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "Whether an aerial apparatus is required at all is a level-of-service decision set in the fire master plan and the community risk assessment, not an automatic replacement."
+    },
+    {
+      "id": "emergency-management",
+      "title": "Emergency management programme currency",
+      "description": "The Emergency Management and Civil Protection Act sets annual requirements. Currency is checkable and binary: each item is either current or it is not.",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "columns": [
+        { "key": "item", "label": "Requirement", "align": "left" },
+        { "key": "requirement", "label": "Cycle", "align": "left" },
+        { "key": "last", "label": "Last completed", "align": "left" },
+        { "key": "status", "label": "Status", "align": "left" }
+      ],
+      "rows": [
+        { "item": "Emergency response plan adopted by by-law", "requirement": "Reviewed annually", "last": "2025-06", "status": "Current" },
+        { "item": "Annual exercise", "requirement": "Annual", "last": "2025-10", "status": "Current" },
+        { "item": "Emergency management programme committee meeting", "requirement": "Annual", "last": "2025-04", "status": "Current" },
+        { "item": "Hazard identification and risk assessment review", "requirement": "Annual", "last": "2024-09", "status": "Review due" },
+        { "item": "Critical infrastructure list review", "requirement": "Annual", "last": "2024-09", "status": "Review due" },
+        { "item": "Community risk assessment (fire)", "requirement": "Reviewed annually, revised every five years", "last": "2023-03", "status": "Current" },
+        { "item": "Emergency information officer designated and trained", "requirement": "Annual", "last": "2025-05", "status": "Current" }
+      ],
+      "source": { "sourceId": "emergency-plan", "locator": "Annual compliance filing" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample"
+    },
+    {
+      "id": "paramedic-county",
+      "title": "Paramedic services, county-delivered",
+      "description": "Land ambulance is an upper-tier service. These figures describe SDG as a whole, not North Glengarry, because that is the geography at which they are reported. They are shown here so the service is visible to a township reader, and labelled so they are not mistaken for township figures.",
+      "geography": "United Counties of Stormont, Dundas and Glengarry",
+      "tier": "county",
+      "columns": [
+        { "key": "metric", "label": "Measure", "align": "left" },
+        { "key": "y2022", "label": "2022", "align": "right" },
+        { "key": "y2023", "label": "2023", "align": "right" },
+        { "key": "y2024", "label": "2024", "align": "right" }
+      ],
+      "rows": [
+        { "metric": "Total calls, county-wide", "y2022": 21400, "y2023": 22600, "y2024": 23900 },
+        { "metric": "Council-approved response time standard met (%)", "y2022": 82.1, "y2023": 80.4, "y2024": 79.6 },
+        { "metric": "Stations in service", "y2022": 8, "y2023": 8, "y2024": 8 }
+      ],
+      "source": { "sourceId": "sdg-paramedic", "locator": "Annual response time performance report" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "A township-level split of these figures may be obtainable from the county on request but is not routinely published. Do not attribute a county-wide figure to North Glengarry."
+    }
+  ]
+}

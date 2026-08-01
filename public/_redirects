@@ -1,0 +1,4 @@
+# Client-side routing. Every path that is not a built asset serves the app
+# shell with a 200, so a deep link such as /stewardship/renewal-gap or a
+# bookmarked /domain/financial resolves instead of 404ing.
+/*    /index.html   200

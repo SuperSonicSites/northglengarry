@@ -1,0 +1,343 @@
+{
+  "id": "infrastructure",
+  "slug": "infrastructure",
+  "name": "Infrastructure",
+  "tagline": "What the township owns, what condition it is in, and the distance between renewal required and renewal funded.",
+  "primer": [
+    "A rural Ontario township is, financially, an infrastructure company with a service department attached. The great majority of what it owns by value is linear and buried or paved: roads, bridges and culverts, watermains, sewers. These assets fail slowly and invisibly, then expensively, and the cost of deferring their renewal does not appear in any operating budget until the year the failure arrives.",
+    "Ontario Regulation 588/17 requires every municipality to maintain an asset management plan on a fixed schedule, and to state proposed levels of service and the cost of maintaining them. That regulation is the reason a document exists at all containing a defensible inventory, a replacement value, a condition distribution, and a renewal requirement. It is the anchor of this domain and should be read before anything else in it.",
+    "The renewal funding gap is the single most important number here. It is the annual cost of keeping the existing asset base at its current level of service, minus what the municipality actually plans to spend on renewal. A persistent gap is not a crisis in any given year — that is precisely what makes it a governance problem, because the year in which nothing visible goes wrong is indistinguishable from the year in which everything is fine.",
+    "Condition ratings are assessments, not measurements, and they age. A pavement condition index produced in a field survey four years ago describes a road that has had four more winters since. Every condition figure in this domain carries the date of the assessment that produced it, and a rating without a date should be treated as an unknown rather than as good news.",
+    "Ownership is split. County roads run through the township and are county assets, rebuilt on the county's capital plan and the county's timetable. Provincial highways are the province's. Residents do not make these distinctions and should not have to; a mayor must. Every asset line in this domain is labelled with its owner, because a commitment to fix a road the township does not own is a commitment that cannot be kept.",
+    "Water and wastewater are different from everything else here because they are, in principle, user-pay. Rates are supposed to recover the full cost of the service including renewal. Whether they actually do is answerable from the rate study, and where they do not, the shortfall is being covered from the tax levy by residents who may not be connected to either system."
+  ],
+  "tierSplit": [
+    { "item": "Local and settlement-area roads", "owner": "township", "note": "Township owns, maintains, plows, and rebuilds." },
+    { "item": "County roads", "owner": "county", "note": "SDG owns and rebuilds. Winter maintenance responsibility may be contracted back to the township — confirm the current agreement." },
+    { "item": "Provincial highways", "owner": "province", "note": "Ministry of Transportation. Township has no maintenance role." },
+    { "item": "Bridges and culverts over three metres", "owner": "shared", "note": "Owned by whichever body owns the road. Both tiers must inspect on a two-year OSIM cycle." },
+    { "item": "Municipal drinking water systems", "owner": "township", "note": "Township is the owner and operating authority; the province regulates and inspects." },
+    { "item": "Wastewater collection and treatment", "owner": "township", "note": "Township operates under an Environmental Compliance Approval issued by the province." },
+    { "item": "Municipal buildings, arenas, halls", "owner": "township" },
+    { "item": "Waste collection and disposal", "owner": "shared", "note": "Confirm the current split between township collection and county or contracted disposal." }
+  ],
+  "gaps": [
+    "Sidewalk inventory and condition are frequently not held as a separate asset class in small municipalities. Confirm whether the asset management plan covers sidewalks at all before recording a figure.",
+    "Stormwater is the least documented asset class in most rural townships. Known constraint areas may exist only in engineering memoranda attached to individual development applications.",
+    "Replacement values in an asset management plan are stated in the dollars of the year the plan was prepared. Comparing a plan-year replacement value against current-year spending understates the gap unless both are indexed to the same year."
+  ],
+  "sourceIds": [
+    "amp",
+    "amp-appendices",
+    "roads-needs-study",
+    "bridge-inspections",
+    "dw-compliance",
+    "wastewater-reports",
+    "water-wastewater-rate-study",
+    "sdg-roads",
+    "grant-agreements",
+    "conservation-authority"
+  ],
+  "lastUpdated": "2026-08-01",
+  "indicators": [
+    {
+      "id": "renewal-gap",
+      "name": "Annual renewal funding gap",
+      "unit": "$",
+      "format": "currency",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "tierNote": "Township-owned assets only. County-owned assets inside the township are not included and carry their own gap on the county's books.",
+      "polarity": "lower-is-favourable",
+      "headline": true,
+      "definition": "Annual renewal investment required to sustain the current level of service across township-owned assets, minus the annual renewal investment actually planned. A positive figure is a shortfall. This measures renewal of existing assets only; it excludes new or expanded assets.",
+      "methodology": "Required renewal is taken from the asset management plan's lifecycle activity forecast, averaged over the plan's forecast period. Planned renewal is taken from the approved capital budget and forecast, counting only renewal and replacement lines. Both must be stated in the same dollar year before they are subtracted.",
+      "series": [
+        { "period": "2020", "value": 2900000, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 3050000, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 3400000, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 3620000, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 3810000, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "renewal-funded-share",
+      "name": "Share of required renewal that is funded",
+      "unit": "%",
+      "format": "percent",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "higher-is-favourable",
+      "headline": true,
+      "definition": "Planned annual renewal investment as a percentage of required annual renewal investment. One hundred percent means the asset base is being sustained at its current level of service. Below one hundred means the difference is being carried forward as deferred renewal.",
+      "series": [
+        { "period": "2020", "value": 45.0, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 44.0, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 41.0, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 41.0, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 40.0, "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "target": {
+        "value": 100,
+        "label": "Full renewal of current level of service",
+        "source": { "sourceId": "amp", "locator": "Levels of service statement" },
+        "provenance": "sample"
+      },
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "asset-replacement-value",
+      "name": "Total asset replacement value",
+      "unit": "$",
+      "format": "currency",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "neutral",
+      "definition": "Estimated cost to replace all township-owned assets at current standards, as stated in the asset management plan. This is a replacement cost, not a book value and not an insured value; the three differ substantially and are not interchangeable.",
+      "series": [
+        { "period": "2020", "value": 268000000, "source": { "sourceId": "amp", "locator": "Asset inventory summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2021", "value": 276000000, "source": { "sourceId": "amp", "locator": "Asset inventory summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2022", "value": 302000000, "source": { "sourceId": "amp", "locator": "Asset inventory summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true, "note": "Step reflects construction cost inflation, not asset growth." },
+        { "period": "2023", "value": 318000000, "source": { "sourceId": "amp", "locator": "Asset inventory summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2024", "value": 327000000, "source": { "sourceId": "amp", "locator": "Asset inventory summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "roads-km-township",
+      "name": "Township road network",
+      "unit": "km",
+      "format": "km",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "tierNote": "Township-owned centreline kilometres. County roads inside the township are counted separately below.",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Centreline kilometres of road owned and maintained by the township, all surface types. Excludes county roads, provincial highways, and private lanes.",
+      "series": [
+        { "period": "2020", "value": 468, "source": { "sourceId": "amp", "locator": "Road inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 468, "source": { "sourceId": "amp", "locator": "Road inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 470, "source": { "sourceId": "amp", "locator": "Road inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 470, "source": { "sourceId": "amp", "locator": "Road inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 472, "source": { "sourceId": "amp", "locator": "Road inventory" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "roads-poor-share",
+      "name": "Township roads rated poor or very poor",
+      "unit": "%",
+      "format": "percent",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "lower-is-favourable",
+      "headline": true,
+      "definition": "Percentage of township road centreline kilometres carrying a condition rating of poor or very poor at the most recent assessment. A rating describes the road on the day it was surveyed.",
+      "methodology": "Condition assessed by field survey using a pavement condition index for hard-surfaced roads and a visual rating for gravel. Surveys are not annual; figures between survey years are carried forward from the last assessment and are marked estimated. Confirm the survey cycle and the last survey date before quoting any of these figures.",
+      "series": [
+        { "period": "2020", "value": 18.0, "source": { "sourceId": "roads-needs-study", "locator": "Condition summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 19.0, "source": { "sourceId": "roads-needs-study", "locator": "Condition summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2022", "value": 21.0, "source": { "sourceId": "roads-needs-study", "locator": "Condition summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 22.0, "source": { "sourceId": "roads-needs-study", "locator": "Condition summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
+        { "period": "2024", "value": 24.0, "source": { "sourceId": "roads-needs-study", "locator": "Condition summary" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "bridges-count",
+      "name": "Bridges and large culverts, township-owned",
+      "unit": "structures",
+      "format": "number",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "neutral",
+      "definition": "Count of township-owned structures with a span of three metres or more, which is the threshold at which biennial inspection under the Ontario Structure Inspection Manual is required.",
+      "series": [
+        { "period": "2020", "value": 41, "source": { "sourceId": "bridge-inspections", "locator": "Structure inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 41, "source": { "sourceId": "bridge-inspections", "locator": "Structure inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 41, "source": { "sourceId": "bridge-inspections", "locator": "Structure inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 40, "source": { "sourceId": "bridge-inspections", "locator": "Structure inventory" }, "recorded": "2026-08-01", "provenance": "sample", "note": "One structure removed from inventory; confirm whether replaced, decommissioned, or reclassified." },
+        { "period": "2024", "value": 40, "source": { "sourceId": "bridge-inspections", "locator": "Structure inventory" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "bridges-needing-work",
+      "name": "Structures with recommended work within five years",
+      "unit": "structures",
+      "format": "number",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "lower-is-favourable",
+      "definition": "Township-owned structures for which the most recent OSIM inspection recommends rehabilitation or replacement within five years. A recommendation is an engineer's judgement about timing, not a statement that a structure is unsafe.",
+      "series": [
+        { "period": "2020", "value": 9, "source": { "sourceId": "bridge-inspections", "locator": "Recommendations summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 11, "source": { "sourceId": "bridge-inspections", "locator": "Recommendations summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 13, "source": { "sourceId": "bridge-inspections", "locator": "Recommendations summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "water-compliance",
+      "name": "Drinking water inspection rating",
+      "unit": "%",
+      "format": "percent",
+      "geography": "Municipal residential drinking water systems, Township of North Glengarry",
+      "tier": "province",
+      "tierNote": "Rating assigned by the provincial inspector. The township is the owner and operating authority.",
+      "polarity": "higher-is-favourable",
+      "headline": true,
+      "definition": "Annual provincial inspection rating for the township's municipal residential drinking water systems, expressed as a percentage. Where more than one system is inspected, the lowest system rating is shown so that a compliant system cannot mask a non-compliant one. Individual system results are in the detail table.",
+      "series": [
+        { "period": "2020", "value": 100.0, "source": { "sourceId": "dw-compliance", "locator": "Inspection rating record" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 100.0, "source": { "sourceId": "dw-compliance", "locator": "Inspection rating record" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 96.8, "source": { "sourceId": "dw-compliance", "locator": "Inspection rating record" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 100.0, "source": { "sourceId": "dw-compliance", "locator": "Inspection rating record" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 100.0, "source": { "sourceId": "dw-compliance", "locator": "Inspection rating record" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "wastewater-bypasses",
+      "name": "Wastewater bypass and overflow events",
+      "unit": "events",
+      "format": "number",
+      "geography": "Township wastewater systems",
+      "tier": "township",
+      "polarity": "lower-is-favourable",
+      "definition": "Count of reported bypass or overflow events at township wastewater facilities and in the collection system during the year. Event counts are strongly weather-driven and a wet year will raise the count without any change in the system.",
+      "series": [
+        { "period": "2020", "value": 2, "source": { "sourceId": "wastewater-reports", "locator": "Annual performance report, bypass summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 1, "source": { "sourceId": "wastewater-reports", "locator": "Annual performance report, bypass summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 4, "source": { "sourceId": "wastewater-reports", "locator": "Annual performance report, bypass summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 3, "source": { "sourceId": "wastewater-reports", "locator": "Annual performance report, bypass summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 5, "source": { "sourceId": "wastewater-reports", "locator": "Annual performance report, bypass summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "fleet-beyond-life",
+      "name": "Fleet units past their replacement age",
+      "unit": "units",
+      "format": "number",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "lower-is-favourable",
+      "definition": "Count of vehicles and major equipment operating past the replacement age set in the asset management plan. Operating past replacement age is a deliberate deferral decision, not a failure; it transfers cost from capital to maintenance.",
+      "series": [
+        { "period": "2020", "value": 6, "source": { "sourceId": "amp-appendices", "locator": "Fleet inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 7, "source": { "sourceId": "amp-appendices", "locator": "Fleet inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 9, "source": { "sourceId": "amp-appendices", "locator": "Fleet inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 8, "source": { "sourceId": "amp-appendices", "locator": "Fleet inventory" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 11, "source": { "sourceId": "amp-appendices", "locator": "Fleet inventory" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    }
+  ],
+  "tables": [
+    {
+      "id": "road-network-by-surface",
+      "title": "Road network by surface type and owner",
+      "description": "Surface type drives lifecycle cost more than any other road attribute. Gravel is cheap to build and expensive to maintain annually; surface-treated roads sit between gravel and asphalt and have the shortest renewal cycle.",
+      "geography": "Township of North Glengarry",
+      "columns": [
+        { "key": "surface", "label": "Surface type", "align": "left" },
+        { "key": "owner", "label": "Owner", "align": "left" },
+        { "key": "km", "label": "Centreline km", "format": "km", "align": "right" },
+        { "key": "share", "label": "Share of network", "format": "percent", "align": "right" },
+        { "key": "cycle", "label": "Typical renewal cycle", "align": "left" }
+      ],
+      "rows": [
+        { "surface": "Asphalt", "owner": "Township", "km": 118, "share": 25.0, "cycle": "18–22 years" },
+        { "surface": "Surface treated", "owner": "Township", "km": 164, "share": 34.7, "cycle": "8–12 years" },
+        { "surface": "Gravel", "owner": "Township", "km": 190, "share": 40.3, "cycle": "Annual resurfacing, no fixed renewal" },
+        { "surface": "Asphalt", "owner": "County", "km": 96, "share": null, "cycle": "20–25 years, county capital plan" },
+        { "surface": "Asphalt", "owner": "Province", "km": 14, "share": null, "cycle": "Provincial programme" }
+      ],
+      "source": { "sourceId": "amp", "locator": "Road inventory by surface" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "Share of network is calculated on township-owned kilometres only, which is why county and provincial rows show no share. County and provincial kilometres are listed so the total road surface a resident drives on is visible, and so the township's share of it is not overstated."
+    },
+    {
+      "id": "water-systems",
+      "title": "Municipal drinking water systems",
+      "description": "Each municipal residential system is licensed, inspected, and rated separately by the province. Rated capacity is the approved maximum in the Drinking Water Works Permit; average day demand against that capacity is what determines whether the system can service growth.",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "columns": [
+        { "key": "system", "label": "System", "align": "left" },
+        { "key": "connections", "label": "Connections", "format": "number", "align": "right" },
+        { "key": "capacity", "label": "Rated capacity (m³/day)", "format": "number", "align": "right" },
+        { "key": "avgDay", "label": "Average day (m³)", "format": "number", "align": "right" },
+        { "key": "utilization", "label": "Utilization", "format": "percent", "align": "right" },
+        { "key": "rating", "label": "Last inspection rating", "format": "percent", "align": "right" },
+        { "key": "inspected", "label": "Inspected", "align": "left" }
+      ],
+      "rows": [
+        { "system": "Alexandria", "connections": 1620, "capacity": 4550, "avgDay": 2380, "utilization": 52.3, "rating": 100.0, "inspected": "2024-09" },
+        { "system": "Maxville", "connections": 480, "capacity": 1180, "avgDay": 610, "utilization": 51.7, "rating": 100.0, "inspected": "2024-10" }
+      ],
+      "source": { "sourceId": "dw-compliance", "locator": "System inspection reports" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "System names, counts, and capacities are placeholders and must be confirmed against the current Drinking Water Works Permit and Municipal Drinking Water Licence before use. Utilization below the rated capacity does not by itself mean a system can service new development: peak day, fire flow, and storage are separate constraints."
+    },
+    {
+      "id": "buildings-inventory",
+      "title": "Municipal buildings: inventory, condition, replacement value",
+      "description": "Condition is stated on the five-point scale used in the asset management plan. Facilities are the asset class where a council decision most often turns on whether to renew or to close, which makes replacement value and condition the two figures to have to hand.",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "columns": [
+        { "key": "building", "label": "Facility", "align": "left" },
+        { "key": "year", "label": "Built", "align": "left" },
+        { "key": "area", "label": "Area (m²)", "format": "number", "align": "right" },
+        { "key": "condition", "label": "Condition", "align": "left" },
+        { "key": "assessed", "label": "Assessed", "align": "left" },
+        { "key": "replacement", "label": "Replacement value", "format": "currency", "align": "right" }
+      ],
+      "rows": [
+        { "building": "Township administration office", "year": "1974", "area": 1180, "condition": "Fair", "assessed": "2022", "replacement": 4900000 },
+        { "building": "Arena and community centre", "year": "1969", "area": 3450, "condition": "Poor", "assessed": "2022", "replacement": 18600000 },
+        { "building": "Public works garage", "year": "1988", "area": 1640, "condition": "Fair", "assessed": "2022", "replacement": 5200000 },
+        { "building": "Fire station, north", "year": "1996", "area": 620, "condition": "Good", "assessed": "2022", "replacement": 2800000 },
+        { "building": "Fire station, south", "year": "1981", "area": 540, "condition": "Fair", "assessed": "2022", "replacement": 2400000 },
+        { "building": "Library branch", "year": "1992", "area": 410, "condition": "Good", "assessed": "2022", "replacement": 1700000 },
+        { "building": "Community hall", "year": "1958", "area": 380, "condition": "Poor", "assessed": "2022", "replacement": 1500000 }
+      ],
+      "source": { "sourceId": "amp", "locator": "Facilities inventory" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "All condition ratings share a single assessment year. A building condition assessment more than three years old should be treated as indicative rather than current."
+    },
+    {
+      "id": "renewal-by-class",
+      "title": "Renewal required versus renewal planned, by asset class",
+      "description": "The renewal gap by class shows where deferral is concentrated. A total gap distributed evenly across classes and a total gap concentrated in one class call for different decisions.",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "columns": [
+        { "key": "class", "label": "Asset class", "align": "left" },
+        { "key": "value", "label": "Replacement value", "format": "currency", "align": "right" },
+        { "key": "required", "label": "Annual renewal required", "format": "currency", "align": "right" },
+        { "key": "planned", "label": "Annual renewal planned", "format": "currency", "align": "right" },
+        { "key": "gap", "label": "Gap", "format": "currency", "align": "right" },
+        { "key": "funded", "label": "Funded share", "format": "percent", "align": "right" }
+      ],
+      "rows": [
+        { "class": "Roads", "value": 168000000, "required": 3400000, "planned": 1250000, "gap": 2150000, "funded": 36.8 },
+        { "class": "Bridges and culverts", "value": 41000000, "required": 820000, "planned": 460000, "gap": 360000, "funded": 56.1 },
+        { "class": "Water", "value": 38000000, "required": 640000, "planned": 520000, "gap": 120000, "funded": 81.3 },
+        { "class": "Wastewater", "value": 31000000, "required": 560000, "planned": 430000, "gap": 130000, "funded": 76.8 },
+        { "class": "Facilities", "value": 37100000, "required": 780000, "planned": 210000, "gap": 570000, "funded": 26.9 },
+        { "class": "Fleet and equipment", "value": 11900000, "required": 940000, "planned": 460000, "gap": 480000, "funded": 48.9 }
+      ],
+      "source": { "sourceId": "amp", "locator": "Lifecycle funding analysis by class" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "Water and wastewater are closer to fully funded than the tax-supported classes because they are rate-funded. Whether the rate genuinely recovers full cost including renewal is answered by the rate study, not by this table."
+    }
+  ]
+}

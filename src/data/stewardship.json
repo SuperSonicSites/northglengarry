@@ -1,0 +1,719 @@
+[
+  {
+    "id": "renewal-gap",
+    "title": "The renewal funding gap",
+    "domainId": "infrastructure",
+    "indicatorRefs": [
+      { "domainId": "infrastructure", "indicatorId": "renewal-gap" },
+      { "domainId": "infrastructure", "indicatorId": "renewal-funded-share" },
+      { "domainId": "financial", "indicatorId": "capital-contribution" },
+      { "domainId": "financial", "indicatorId": "reserves-total" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "The asset management plan states an annual renewal requirement for township-owned assets that exceeds the renewal investment in the approved capital budget and forecast. The difference is the renewal funding gap.",
+        "sources": [{ "sourceId": "amp", "locator": "Lifecycle funding analysis" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "The gap is not distributed evenly. Facilities and roads carry the largest shortfalls relative to their renewal requirement; water and wastewater, which are rate-funded rather than levy-funded, are closer to fully funded.",
+        "sources": [{ "sourceId": "amp", "locator": "Lifecycle funding analysis by class" }]
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether the replacement values in the current asset management plan have been restated in current dollars, or remain in the dollars of the year the plan was prepared. If they have not been restated, the stated gap understates the real one."
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "sourced",
+        "text": "The operating contribution to capital and reserves has risen in nominal terms across the period, while total reserves have fallen. Reserves have been drawn down faster than they have been replenished.",
+        "sources": [
+          { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" },
+          { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }
+        ]
+      },
+      {
+        "kind": "sourced",
+        "text": "Asset replacement values rose across the period by more than the growth in the asset base itself, which the plan attributes to construction cost inflation rather than to new assets.",
+        "sources": [{ "sourceId": "amp", "locator": "Asset inventory summary" }]
+      },
+      {
+        "kind": "interpretation",
+        "text": "A renewal requirement indexed to construction costs and a renewal budget indexed to what the levy will bear are two different escalators. Where construction costs rise faster than the levy, the gap widens even when the municipality increases its renewal spending every year. This is arithmetic rather than a judgement about any decision."
+      },
+      {
+        "kind": "open-question",
+        "text": "How much of the gap is a genuine shortfall against service levels residents expect, and how much reflects a level of service in the plan that is higher than what council has actually chosen to provide. The plan's stated levels of service have not been confirmed against council's adopted positions."
+      }
+    ],
+    "trend": {
+      "direction": "declining",
+      "magnitude": "The funded share of required renewal declined across the five-year window; the absolute gap widened over the same period.",
+      "confidence": "low",
+      "basis": [
+        {
+          "kind": "sourced",
+          "text": "Both the gap and the funded share are drawn from successive asset management plan updates.",
+          "sources": [{ "sourceId": "amp", "locator": "Lifecycle funding analysis" }]
+        },
+        {
+          "kind": "interpretation",
+          "text": "Confidence is low until the underlying figures are transcribed from the actual plan and until it is confirmed that each year's figures are stated in comparable dollars. A gap series assembled from plans prepared in different years using different cost bases is not a trend."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "amp", "locator": "Lifecycle funding analysis; levels of service statement", "why": "The requirement, the assumptions behind it, and the service levels it is sized to sustain. Read the levels of service section first: it determines what the gap is a gap against." },
+      { "sourceId": "amp-appendices", "why": "Per-asset detail behind the class totals. This is where a gap concentrated in a small number of assets becomes visible as such." },
+      { "sourceId": "budget-current", "locator": "Capital budget and forecast", "why": "The planned side of the subtraction. Count only renewal and replacement lines; growth and new assets are a different question." },
+      { "sourceId": "fir", "locator": "Schedule 60", "why": "Reserve continuity. Whether renewal is being funded from current taxation or from accumulated balances." },
+      { "sourceId": "roads-needs-study", "why": "Roads are the largest class by value. Condition assessment dates determine whether the roads component of the requirement is current." }
+    ],
+    "questions": [
+      "What level of service is the renewal requirement in the asset management plan sized to sustain, and has council formally adopted that level of service?",
+      "Are the replacement values in the current plan stated in the dollars of the plan year or restated to current dollars?",
+      "If renewal investment stayed at its current level for ten years, which asset classes would reach the end of their service life first, and what would the service consequence be?",
+      "What would closing the gap entirely require as an annual levy increase, and over what period would it need to be phased?",
+      "Which parts of the gap could be addressed through grant programmes rather than the levy, and what does the grant application pipeline currently look like?",
+      "How much of the reserve drawdown over the past five years funded renewal, and how much funded new or expanded assets?"
+    ],
+    "opportunities": [
+      {
+        "kind": "sourced",
+        "text": "The Ontario Community Infrastructure Fund provides formula-based and application-based capital funding for renewal of core infrastructure in small and rural municipalities. Formula allocations are announced annually.",
+        "sources": [{ "sourceId": "grant-agreements" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "The Canada Community-Building Fund allocation is formula-driven, predictable, and eligible for renewal work. Its accumulated balance sits in an obligatory reserve fund and is visible in the reserves table.",
+        "sources": [{ "sourceId": "fir", "locator": "Schedule 60" }]
+      },
+      {
+        "kind": "interpretation",
+        "text": "Surface treatment and gravel roads have shorter renewal cycles than asphalt but far lower renewal cost per kilometre. Where a road's traffic volume does not require a hard surface, the surface type decision is itself a lifecycle funding decision. Whether any such roads exist in the network is answerable from the roads needs study."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether shared services with neighbouring municipalities or with the county could reduce the fleet and facilities components of the requirement. No study of this has been located."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "A gap sustained over a full council term compounds: the assets that were not renewed are older, and the requirement in the next plan is larger than the one in this plan.",
+        "leadingIndicator": "Funded share of required renewal, year over year",
+        "threshold": "Any year in which the funded share falls while the levy rises is worth a specific explanation."
+      },
+      {
+        "kind": "sourced",
+        "text": "The share of township roads rated poor or very poor increased over the period, on assessments that are not annual.",
+        "leadingIndicator": "Share of roads rated poor or very poor, and the date of the assessment that produced it",
+        "threshold": "A condition assessment older than four years should be treated as unknown rather than as the last known good figure.",
+        "sources": [{ "sourceId": "roads-needs-study", "locator": "Condition summary" }]
+      },
+      {
+        "kind": "interpretation",
+        "text": "Reserve drawdown can substitute for renewal funding for several years without any visible service consequence, and then cannot. The absence of a visible problem is not evidence that the funding level is adequate.",
+        "leadingIndicator": "Reserves per household, and discretionary reserves as a share of the total",
+        "threshold": "Discretionary reserves falling while obligatory reserve funds hold steady means the freely usable balance is shrinking faster than the headline total suggests."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "levy-and-assessment",
+    "title": "The levy, the rate, and the assessment base",
+    "domainId": "financial",
+    "indicatorRefs": [
+      { "domainId": "financial", "indicatorId": "tax-levy-total" },
+      { "domainId": "financial", "indicatorId": "levy-per-household" },
+      { "domainId": "financial", "indicatorId": "assessment-base" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "The township levy rose across the five-year window. The assessment base rose over the same period at a slower rate, which is consistent with growth from new construction rather than from reassessment.",
+        "sources": [
+          { "sourceId": "fir", "locator": "Schedule 10" },
+          { "sourceId": "mpac-roll", "locator": "Returned roll summary" }
+        ]
+      },
+      {
+        "kind": "sourced",
+        "text": "Residential and multi-residential classes carry the same tax ratio in the rate by-law. Farm and managed forest are at a quarter of the residential rate, which is the standard Ontario treatment.",
+        "sources": [{ "sourceId": "tax-rate-bylaw", "locator": "Schedule A" }]
+      },
+      {
+        "kind": "open-question",
+        "text": "What share of the total bill a North Glengarry ratepayer receives is township, county, and education. Until the county levy apportionment and the education rate are recorded alongside the township rate, no statement about 'the tax increase' can be made accurately."
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "interpretation",
+        "text": "When the assessment base is largely frozen by postponed provincial reassessment, growth in the levy must come almost entirely from the rate and from new construction. A rising rate in this circumstance is not by itself evidence of rising spending relative to the size of the tax base."
+      },
+      {
+        "kind": "sourced",
+        "text": "Operating expenses rose faster over the period than the levy, with the difference covered by grants, user fees, and other own-source revenue.",
+        "sources": [{ "sourceId": "fir", "locator": "Schedules 10 and 40" }]
+      },
+      {
+        "kind": "open-question",
+        "text": "Which expense categories account for the majority of the operating increase. Departmental groupings differ between the budget by-law and the audited statements, and the reconciliation has not been done."
+      }
+    ],
+    "trend": {
+      "direction": "flat",
+      "magnitude": "Levy per household rose across the window. Whether that represents a real increase depends on the price index applied, which has not been chosen.",
+      "confidence": "low",
+      "basis": [
+        {
+          "kind": "interpretation",
+          "text": "Nominal levy growth over a period of elevated general inflation and elevated municipal construction cost inflation cannot be characterised as an increase or a decrease without deflating it, and the appropriate deflator for a municipality is not the consumer price index."
+        },
+        {
+          "kind": "open-question",
+          "text": "Which price index the dashboard should use to state real changes. This is a methodological choice that should be made once, stated, and applied consistently."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "tax-rate-bylaw", "locator": "Schedule A", "why": "Rates and ratios by class, per year. The primary document for anything about rates." },
+      { "sourceId": "fir", "locator": "Schedule 10", "why": "Levy and total revenue on a consistent multi-year basis." },
+      { "sourceId": "mpac-roll", "why": "Assessment by class and the valuation date. Read the valuation date before the values." },
+      { "sourceId": "county-budget", "why": "The county levy and how it is apportioned. The portion of the bill township council votes on at a different table." },
+      { "sourceId": "budget-current", "why": "The plan behind the levy: what the increase was raised to fund." }
+    ],
+    "questions": [
+      "What proportion of a typical North Glengarry tax bill is township, county, and education, and how has each moved over five years?",
+      "How much of the levy increase in each year was attributable to new assessment growth versus a rate increase?",
+      "What was the levy increase used for, year by year — service expansion, cost inflation on existing services, or the contribution to capital and reserves?",
+      "Are the current tax ratios between property classes the ones council has reviewed, or the ones inherited from an earlier decision?",
+      "What is the assessment valuation date currently in force, and what would a return to regular reassessment mean for the distribution of the levy between classes?"
+    ],
+    "opportunities": [
+      {
+        "kind": "sourced",
+        "text": "The Ontario Municipal Partnership Fund allocation is announced annually and is unconditional. Its trajectory is knowable in advance of the budget and can be planned against.",
+        "sources": [{ "sourceId": "grant-agreements" }]
+      },
+      {
+        "kind": "interpretation",
+        "text": "Presenting the levy alongside the assessment base, rather than presenting the rate alone, makes the distinction between rate movement and levy movement visible to residents. That is a communication choice available to any council without a policy change."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "A levy increase set to match general inflation will fall behind if municipal input costs — construction, fuel, insurance, contracted services — rise faster than the consumer price index, which they have in recent years.",
+        "leadingIndicator": "Operating expense growth against levy growth",
+        "threshold": "Two consecutive years in which expense growth exceeds levy growth without a corresponding rise in grants or user fees."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Assessment growth concentrated in one property class shifts the burden between classes even when ratios do not change.",
+        "leadingIndicator": "Assessment by class, year over year",
+        "threshold": "Any year in which one class's share of total assessment moves by more than a percentage point."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "volunteer-fire",
+    "title": "The volunteer fire service and its roster",
+    "domainId": "safety",
+    "indicatorRefs": [
+      { "domainId": "safety", "indicatorId": "volunteer-roster" },
+      { "domainId": "safety", "indicatorId": "fire-incidents" },
+      { "domainId": "safety", "indicatorId": "fire-response-time" },
+      { "domainId": "safety", "indicatorId": "apparatus-past-life" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "The volunteer roster declined across the five-year window while total incident volume rose. Growth in call volume is concentrated in medical assist and motor vehicle collision calls rather than in fires.",
+        "sources": [
+          { "sourceId": "fire-annual", "locator": "Roster; incident summary by type" }
+        ]
+      },
+      {
+        "kind": "sourced",
+        "text": "Three front-line apparatus are operating past the service life stated in the replacement schedule, and two of those have no reserve set aside for replacement.",
+        "sources": [{ "sourceId": "amp", "locator": "Fire apparatus replacement schedule" }]
+      },
+      {
+        "kind": "open-question",
+        "text": "How many roster members are actually available for a weekday daytime call. Roster size is reported; daytime availability is the figure that determines response depth and it has not been located in any published document."
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "interpretation",
+        "text": "Volunteer recruitment in rural municipalities is affected by residents commuting to employment outside the township, by the training hours now required, and by the age structure of the population. Each of these is measurable in principle; none has been measured here."
+      },
+      {
+        "kind": "sourced",
+        "text": "The population aged 25 to 44 — the age band from which volunteer services typically recruit — declined as a share of the township population across three census cycles.",
+        "sources": [{ "sourceId": "census-2021", "locator": "Age characteristics" }]
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether recruitment or retention is the binding constraint. A roster that loses eight and recruits four has a different problem than one that loses four and recruits none, and the annual report has not been examined for entries and exits separately."
+      }
+    ],
+    "trend": {
+      "direction": "declining",
+      "magnitude": "Roster declined across the window while incidents rose. Response time at the 90th percentile lengthened over the same period.",
+      "confidence": "medium",
+      "basis": [
+        {
+          "kind": "sourced",
+          "text": "Roster and incident counts are the fire service's own annual figures and are internally consistent.",
+          "sources": [{ "sourceId": "fire-annual" }]
+        },
+        {
+          "kind": "interpretation",
+          "text": "Response time carries lower confidence than the roster and incident counts because the measurement definition has not been confirmed across years. A change in dispatch practice can move this figure without any change in the service."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "fire-master-plan", "why": "The service model and the depth of response council has adopted. This is the only fair benchmark for the service, because council set it." },
+      { "sourceId": "fire-annual", "why": "Roster, incidents, training hours, and whatever response data the service records. Read several consecutive years to see entries and exits separately." },
+      { "sourceId": "amp", "locator": "Fire apparatus replacement schedule", "why": "What is due, when, at what cost, and whether it is reserved for." },
+      { "sourceId": "ofm-statistics", "why": "Provincial context on incident types and fire loss. Small-municipality cells may be suppressed." },
+      { "sourceId": "census-2021", "locator": "Age characteristics; commuting", "why": "The recruitment pool and how much of it leaves the township on a weekday." }
+    ],
+    "questions": [
+      "How many firefighters responded to the average call, and how many responded to weekday daytime calls specifically?",
+      "How many firefighters joined and how many left in each of the past five years, and what reasons were recorded for departures?",
+      "What depth of response does the fire master plan commit to, and is the service currently meeting it?",
+      "What is the total cost of training a new volunteer firefighter to the point of being able to enter a structure, and how long does it take?",
+      "For each apparatus past its service life, what is the operational consequence of continuing to run it, and what does the insurance grading for protected properties depend on?",
+      "Has a shared or automatic aid agreement with neighbouring municipalities been examined, and what would it change about the required apparatus fleet?"
+    ],
+    "opportunities": [
+      {
+        "kind": "interpretation",
+        "text": "Automatic aid agreements with adjacent municipalities can raise effective response depth without adding roster, and can change what apparatus each party needs to own. Whether such agreements exist and what they cover is answerable from the fire master plan and council records."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether a shared aerial apparatus arrangement is feasible with a neighbouring service. The aerial is the largest single unfunded replacement in the schedule and is the type of asset most commonly shared."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Where call growth is in medical assist rather than fire, the training and equipment profile that best serves the community may differ from the one a traditional fire service is built around. That is a level-of-service question for council rather than an operational one for the chief."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "Roster decline and call growth compound: fewer firefighters responding to more calls raises the burden per volunteer, which is itself a retention risk.",
+        "leadingIndicator": "Roster size and incidents per roster member",
+        "threshold": "Any year in which roster falls and incidents rise simultaneously warrants a specific report to council."
+      },
+      {
+        "kind": "sourced",
+        "text": "Apparatus running past service life without a funded replacement transfers a known future cost into an unplanned year.",
+        "leadingIndicator": "Count of apparatus past service life with no reserve",
+        "threshold": "Any unit past service life with no reserve balance and no approved replacement.",
+        "sources": [{ "sourceId": "amp", "locator": "Fire apparatus replacement schedule" }]
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "servicing-ceiling",
+    "title": "The servicing ceiling on growth",
+    "domainId": "planning",
+    "indicatorRefs": [
+      { "domainId": "planning", "indicatorId": "servicing-headroom" },
+      { "domainId": "planning", "indicatorId": "pipeline-units" },
+      { "domainId": "community", "indicatorId": "permits-residential" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "Uncommitted wastewater treatment capacity in the serviced settlement areas declined across the period as capacity was allocated to approved developments. Wastewater is the binding constraint in both serviced areas; water capacity is less constrained.",
+        "sources": [{ "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "The approved but unbuilt residential pipeline grew across the same period while residential building permits declined.",
+        "sources": [
+          { "sourceId": "planning-reports", "locator": "Subdivision status" },
+          { "sourceId": "building-permits", "locator": "Annual permit summary" }
+        ]
+      },
+      {
+        "kind": "interpretation",
+        "text": "Approvals rising while construction falls means allocated capacity is being held against units that are not being built. The capacity is unavailable to other applicants and is producing no assessment growth in the meantime."
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "open-question",
+        "text": "Why approved units are not being built. Financing conditions, construction cost, and developer sequencing are the usual explanations and none of them has been verified against any document about these specific projects."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether allocated capacity expires if a development does not proceed within a set period, or is held indefinitely. This is determined by the township's allocation policy, which has not been located."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Treatment capacity in a small system is expanded in large discrete steps, not incrementally. That means headroom declines gradually and then must be restored by a single large capital project, which is a budget event that has to be anticipated years before it becomes urgent."
+      }
+    ],
+    "trend": {
+      "direction": "declining",
+      "magnitude": "Uncommitted capacity fell across the four years for which figures exist. At the average rate of decline over that period, the remaining headroom represents a limited number of years of allocation.",
+      "confidence": "low",
+      "basis": [
+        {
+          "kind": "interpretation",
+          "text": "Extrapolating an allocation rate from four data points is indicative only, and the underlying figures are placeholders. The rate of allocation depends on when applications arrive, which is not a smooth process."
+        },
+        {
+          "kind": "open-question",
+          "text": "The per-unit flow assumption behind the headroom figures has not been confirmed. It changes the answer more than any other input."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis", "why": "Rated capacity, current flows, and the assumptions behind the headroom calculation. Read the assumptions before the conclusions." },
+      { "sourceId": "official-plan", "why": "Where growth is directed and how much of it the plan assumes will be serviced. A plan directing growth to an area without capacity is a conflict worth identifying early." },
+      { "sourceId": "planning-reports", "locator": "Subdivision status", "why": "What is approved, what is registered, what is built, and what capacity is allocated to each." },
+      { "sourceId": "wastewater-reports", "why": "Actual plant performance against the Environmental Compliance Approval. A plant near its approved limits has less headroom than its rated capacity suggests." },
+      { "sourceId": "development-charges", "why": "Whether a development charges by-law exists. If not, expansion is funded from the levy by all ratepayers rather than by the growth that requires it." }
+    ],
+    "questions": [
+      "How much treatment capacity is currently allocated to approved but unbuilt units, and does that allocation expire?",
+      "What per-unit flow rate is used in the headroom calculation, and when was it last validated against actual metered flows?",
+      "At the current rate of allocation, in what year does the township run out of uncommitted capacity in each serviced area?",
+      "What would a capacity expansion cost, how long would it take from decision to commissioning, and what is the lead time on the approvals it requires?",
+      "Does the township have a development charges by-law, and if not, what funds growth-related infrastructure?",
+      "Is there a written allocation policy, and does it prioritise between application types — for example, between rental and ownership housing, or between residential and employment uses?"
+    ],
+    "opportunities": [
+      {
+        "kind": "interpretation",
+        "text": "Inflow and infiltration reduction in the collection system recovers treatment capacity without expanding the plant, and is typically a fraction of the cost of expansion. Whether the collection system has significant infiltration is answerable from wet-weather flow data the operating authority already holds."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether an allocation policy with a use-it-or-lose-it provision would return capacity from stalled approvals. Such policies are in use in other Ontario municipalities; whether one is appropriate here has not been examined."
+      },
+      {
+        "kind": "sourced",
+        "text": "Provincial and federal infrastructure programmes have funded water and wastewater expansion in small municipalities. Grant availability, not municipal readiness, usually determines the timing of these projects.",
+        "sources": [{ "sourceId": "grant-agreements" }]
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "Capacity exhaustion halts serviced development regardless of official plan policy, council intent, or market demand. It is the one constraint that cannot be resolved by a decision at a council meeting.",
+        "leadingIndicator": "Uncommitted capacity in the most constrained settlement area",
+        "threshold": "Uncommitted capacity falling below the number of units in the active application pipeline."
+      },
+      {
+        "kind": "interpretation",
+        "text": "An expansion project entered into under time pressure has less competitive tension and fewer funding options than one planned years ahead.",
+        "leadingIndicator": "Years of remaining headroom at the current allocation rate, against the lead time from decision to commissioning",
+        "threshold": "Remaining headroom shorter than the project lead time."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "aging-population",
+    "title": "Age structure and what it commits the township to",
+    "domainId": "community",
+    "indicatorRefs": [
+      { "domainId": "community", "indicatorId": "median-age" },
+      { "domainId": "community", "indicatorId": "dependency-ratio" },
+      { "domainId": "community", "indicatorId": "population" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "Median age rose across four census cycles. The share of the population aged 65 and over rose in each cycle while the shares aged under 15, 15 to 24, and 45 to 64 each declined.",
+        "sources": [{ "sourceId": "census-2021", "locator": "Age characteristics" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "Total population declined between 2006 and 2016 and rose slightly in 2021. Household counts rose across the whole period, which means household size fell.",
+        "sources": [
+          { "sourceId": "census-2021", "locator": "Population and dwellings" },
+          { "sourceId": "census-2016", "locator": "Population and dwellings" }
+        ]
+      },
+      {
+        "kind": "sourced",
+        "text": "The housing stock is overwhelmingly single-detached and owner-occupied. Apartment and row housing together account for a small share of dwellings.",
+        "sources": [{ "sourceId": "census-2021", "locator": "Dwelling characteristics" }]
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "interpretation",
+        "text": "Population aging in a rural municipality is driven by three separate movements: residents growing older in place, younger residents leaving, and older residents arriving. They have different policy implications and the census does not distinguish them without migration data."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether the slight population increase in the most recent cycle reflects in-migration and of what age composition. Statistics Canada publishes mobility and migration characteristics that would answer this and they have not been examined."
+      },
+      {
+        "kind": "interpretation",
+        "text": "A housing stock composed almost entirely of single-detached owner-occupied houses offers limited options for a household that wants to remain in the township but no longer wants to maintain a house and a lot. Where those options do not exist locally, the household moves away, and the age structure and the housing stock reinforce each other."
+      }
+    ],
+    "trend": {
+      "direction": "declining",
+      "magnitude": "The dependency ratio rose across four census cycles, driven by the population aged 65 and over.",
+      "confidence": "high",
+      "basis": [
+        {
+          "kind": "sourced",
+          "text": "Four consecutive census cycles at a geography that matches the municipal boundary, with a consistent definition across cycles.",
+          "sources": [{ "sourceId": "census-2021" }, { "sourceId": "census-2016" }]
+        },
+        {
+          "kind": "interpretation",
+          "text": "Confidence is high in the direction because demographic momentum makes it near-certain over the next cycle: the cohort that will be 65 to 74 in the next census is already resident and already counted."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "census-2021", "locator": "Age characteristics; dwelling characteristics; mobility", "why": "The core profile. Read age and dwelling type together — each constrains the other." },
+      { "sourceId": "census-2016", "why": "The comparison cycles. Note any definitional break between cycles rather than smoothing it." },
+      { "sourceId": "sdg-social-services", "why": "Social housing waitlists and seniors' services are county-delivered. County reports are where demand for them appears." },
+      { "sourceId": "official-plan", "why": "Whether the plan permits the housing forms an aging population needs, and where." },
+      { "sourceId": "recreation-reports", "why": "Whether facility programming and usage reflect the age structure the census describes." }
+    ],
+    "questions": [
+      "What housing forms does the zoning by-law currently permit in the settlement areas, and are smaller ownership and rental units among them?",
+      "What is the county's social housing and seniors' housing waitlist, and what portion originates in North Glengarry?",
+      "Where does the demographic profile show up first in township service demand — recreation programming, sidewalks and accessibility, snow clearing, or facility design?",
+      "How many residents commute out of the township for work, and how has that changed? It bears on volunteer recruitment, daytime service demand, and school enrolment.",
+      "Is there any township or county policy currently directed at retaining or attracting residents aged 25 to 44, and what does it measure?"
+    ],
+    "opportunities": [
+      {
+        "kind": "interpretation",
+        "text": "Permitting additional residential units within existing dwellings and on existing serviced lots adds housing options without requiring new subdivision or new servicing capacity. Provincial legislation has expanded what municipalities must permit in this respect; what the township's zoning by-law currently permits is a checkable fact."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether the township has examined seniors' housing demand specifically, as opposed to housing demand generally. The two produce different built forms in different locations."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Age structure is the most predictable variable a municipality plans against. The population that will be 75 and over in ten years is already resident, already counted, and its size is known within census error. Very little else about the future of the township is knowable to that precision."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "Service demand shifts by age band with a lag long enough that the council which experiences the demand is rarely the council that could have planned for it.",
+        "leadingIndicator": "Share of population aged 55 to 64 in the current census",
+        "threshold": "That cohort's size sets the 65 to 74 cohort in the next cycle. Any planning horizon shorter than a census cycle cannot see it."
+      },
+      {
+        "kind": "interpretation",
+        "text": "A declining share of working-age residents affects volunteer services, the local labour force available to the township as an employer, and school enrolment, which is decided by school boards the township does not control.",
+        "leadingIndicator": "Population aged 25 to 44, share and absolute",
+        "threshold": "Continued decline across two consecutive census cycles."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "strategic-measurement",
+    "title": "Whether council's stated priorities are measurable",
+    "domainId": "council",
+    "indicatorRefs": [
+      { "domainId": "council", "indicatorId": "strategic-priorities-measured" },
+      { "domainId": "council", "indicatorId": "closed-session-share" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "A minority of the strategic plan's stated priorities carry an explicit measure. The remainder state a direction without a checkable indicator of progress.",
+        "sources": [{ "sourceId": "strategic-plan", "locator": "Priorities and measures" }]
+      },
+      {
+        "kind": "interpretation",
+        "text": "Where a priority has no measure, this dashboard records a proxy indicator drawn from elsewhere in the data. Those proxies are this dashboard's analysis, not council's position, and they are labelled that way in the priorities table."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether council receives any periodic report on progress against the strategic plan, and if so on what cycle. No such report has been located in the agenda record examined so far."
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "interpretation",
+        "text": "Strategic plans in small municipalities are commonly produced through a facilitated session that generates directions rather than metrics, and the staff capacity to build and maintain a measurement framework afterwards is limited. This is a general pattern and has not been verified as the explanation here."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether measures were proposed and not adopted, or never proposed. The report that accompanied the plan's adoption would show this."
+      }
+    ],
+    "trend": {
+      "direction": "flat",
+      "magnitude": "No change across the three years for which the current plan has been in force.",
+      "confidence": "medium",
+      "basis": [
+        {
+          "kind": "sourced",
+          "text": "The plan has not been amended since adoption, so the measured share is unchanged by construction.",
+          "sources": [{ "sourceId": "strategic-plan" }]
+        },
+        {
+          "kind": "interpretation",
+          "text": "A flat reading here carries no information about whether the priorities themselves are being advanced. It describes the plan document, not the work."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "strategic-plan", "why": "The priorities as written, and the measures where they exist. Note which priorities are stated as outcomes and which as activities — the distinction determines whether a measure is even possible." },
+      { "sourceId": "council-agendas", "locator": "Report accompanying strategic plan adoption", "why": "What was recommended, what council changed, and whether measurement was discussed." },
+      { "sourceId": "budget-current", "why": "Whether budget decisions are presented against strategic priorities or independently of them. This is the practical test of whether a plan is operative." }
+    ],
+    "questions": [
+      "For each strategic priority without a measure, what would a reasonable measure be, and is the data to support it already collected?",
+      "Does council receive a periodic progress report against the strategic plan, and on what cycle?",
+      "Are budget decisions presented to council against strategic priorities, or separately from them?",
+      "When the plan was adopted, were measures proposed and set aside, or not proposed at all?",
+      "Which of the current priorities would a resident be able to tell had been achieved, on the evidence the township already publishes?"
+    ],
+    "opportunities": [
+      {
+        "kind": "interpretation",
+        "text": "Several priorities without stated measures could be tracked using data the township already produces for other purposes — the asset management plan, the Financial Information Return, permit records. Adding a measure need not add a data collection burden."
+      },
+      {
+        "kind": "interpretation",
+        "text": "A short annual report against the strategic plan is a low-cost instrument that makes the plan operative and gives council a scheduled occasion to revisit priorities against evidence."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "A plan without measures cannot be shown to have succeeded or failed, which means it also cannot inform the next plan.",
+        "leadingIndicator": "Share of priorities carrying a stated measure",
+        "threshold": "Any priority carried forward into a subsequent plan without a measure having been added."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Where budget decisions are made independently of stated priorities, the budget becomes the operative strategy regardless of what the plan says.",
+        "leadingIndicator": "Whether budget reports reference strategic priorities",
+        "threshold": "A budget cycle completed with no report connecting decisions to the plan."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "reserves-position",
+    "title": "The reserve position and what is actually spendable",
+    "domainId": "financial",
+    "indicatorRefs": [
+      { "domainId": "financial", "indicatorId": "reserves-total" },
+      { "domainId": "financial", "indicatorId": "reserves-per-household" },
+      { "domainId": "financial", "indicatorId": "long-term-debt" },
+      { "domainId": "financial", "indicatorId": "debt-repayment-share" }
+    ],
+    "whatIsHappening": [
+      {
+        "kind": "sourced",
+        "text": "Total reserves and reserve funds declined across the five-year window in both absolute terms and per household.",
+        "sources": [{ "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "The decline is concentrated in discretionary reserves. Obligatory and rate-funded reserve funds — water capital, wastewater capital, parkland — held steady or rose over the same period.",
+        "sources": [{ "sourceId": "audited-fs", "locator": "Note on reserves and reserve funds" }]
+      },
+      {
+        "kind": "sourced",
+        "text": "Long-term debt fell for three years, rose in one year on new issuance, and fell again. Debt servicing as a share of own-source revenue remained well below the provincial Annual Repayment Limit throughout.",
+        "sources": [{ "sourceId": "fir", "locator": "Schedule 70; Annual Repayment Limit statement" }]
+      }
+    ],
+    "whyIsItHappening": [
+      {
+        "kind": "interpretation",
+        "text": "Discretionary reserves falling while restricted reserve funds hold steady means the freely usable balance is shrinking faster than the headline total suggests. A total reserve figure conceals this entirely, which is why the reserves table is broken out by purpose and by type."
+      },
+      {
+        "kind": "open-question",
+        "text": "What the discretionary reserve drawdown funded. Whether it went to renewal of existing assets or to new and expanded assets is the question that determines how to read it, and it requires reconciling the reserve continuity schedule against the capital projects of each year."
+      },
+      {
+        "kind": "interpretation",
+        "text": "Substantial unused borrowing room alongside a declining reserve position is a financing structure question rather than a solvency question. Whether to fund renewal from reserves, from debt, or from the current levy is a council decision with different consequences for intergenerational cost allocation, and none of the three is automatically correct."
+      }
+    ],
+    "trend": {
+      "direction": "declining",
+      "magnitude": "Reserves per household declined across the five-year window. Debt servicing remained a small fraction of the provincial limit throughout.",
+      "confidence": "medium",
+      "basis": [
+        {
+          "kind": "sourced",
+          "text": "The Financial Information Return reserve continuity schedule is consistent year over year and is the most reliable multi-year financial series available.",
+          "sources": [{ "sourceId": "fir", "locator": "Schedule 60" }]
+        },
+        {
+          "kind": "interpretation",
+          "text": "The direction is clear; its significance is not determinable from these figures alone, because a reserve drawdown that funded renewal has a different meaning than one that funded operations."
+        }
+      ]
+    },
+    "reading": [
+      { "sourceId": "fir", "locator": "Schedule 60", "why": "Reserve continuity: opening balance, contributions, withdrawals, closing balance. The withdrawals line is the one to follow." },
+      { "sourceId": "audited-fs", "locator": "Note on reserves and reserve funds", "why": "Reserves by purpose and the discretionary versus obligatory split the return does not show." },
+      { "sourceId": "fir", "locator": "Annual Repayment Limit statement", "why": "The ministry's own calculation of borrowing room. Use it rather than recomputing." },
+      { "sourceId": "budget-current", "why": "Planned contributions to and withdrawals from reserves for the current year." },
+      { "sourceId": "amp", "locator": "Lifecycle funding analysis", "why": "What the reserve position needs to be able to fund. Reserves are only adequate or inadequate relative to a renewal requirement." }
+    ],
+    "questions": [
+      "For each of the past five years, what did discretionary reserve withdrawals fund?",
+      "Is there a council-adopted reserve policy setting target balances by purpose, and if so what are the targets and how do current balances compare?",
+      "What is the current Annual Repayment Limit as calculated by the ministry, and what would servicing an additional debenture of a given size do to it?",
+      "How much of the total reserve balance is restricted by statute and unavailable for general purposes?",
+      "For the largest upcoming capital projects, what is the intended funding mix between reserves, debt, grants, and the levy, and when was that mix last reviewed?"
+    ],
+    "opportunities": [
+      {
+        "kind": "interpretation",
+        "text": "Substantial unused borrowing capacity means debt financing is available for renewal of long-lived assets. Financing a fifty-year asset over twenty years allocates its cost across some of the residents who will use it, which is an argument on the merits rather than a recommendation."
+      },
+      {
+        "kind": "open-question",
+        "text": "Whether a formal reserve policy with target balances by purpose exists. Where one does, it converts reserve decisions from annual judgement calls into decisions against a standard council has already set."
+      }
+    ],
+    "risks": [
+      {
+        "kind": "interpretation",
+        "text": "Reserves drawn down to fund recurring costs rather than one-time capital create a structural gap that reappears every year and grows.",
+        "leadingIndicator": "Discretionary reserve withdrawals against capital expenditure in the same year",
+        "threshold": "Any year in which withdrawals exceed capital spending funded from reserve."
+      },
+      {
+        "kind": "interpretation",
+        "text": "A thin working funds reserve reduces the municipality's ability to absorb an unbudgeted event — a severe winter, a plant failure, a legal settlement — without an in-year levy consequence.",
+        "leadingIndicator": "Working funds reserve against annual operating expenses",
+        "threshold": "Council should have a stated target here; in its absence, the trend over five years is the only available reference."
+      }
+    ],
+    "lastUpdated": "2026-08-01"
+  }
+]

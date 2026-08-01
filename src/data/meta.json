@@ -1,0 +1,20 @@
+{
+  "municipality": "Township of North Glengarry",
+  "upperTier": "United Counties of Stormont, Dundas and Glengarry",
+  "province": "Ontario",
+  "version": "0.2.0",
+  "dataAsOf": "2026-08-01",
+  "privacyNote": "Personal information from council packages — resident names, addresses, delegation submissions, and correspondence — is excluded from this dashboard by policy. Where a council decision turned on a named individual's application, the decision is recorded and the individual is not.",
+  "neutralityNote": "Language in this dashboard is descriptive. Figures are reported with their direction of travel and their source. Judgement about whether a figure is good or bad belongs to the reader, and the interface does not supply it. Content drawn from the record and content that is interpretation are separated and labelled wherever both appear.",
+  "sampleDataNote": "This build ships with placeholder figures so the instrument is complete and usable before transcription begins. Every placeholder is marked SAMPLE in the interface and counted on the Data Integrity page. No placeholder is presented as fact, and none should be quoted. Replace them by editing the JSON files in src/data and setting provenance to \"sourced\".",
+  "openQuestions": [
+    "Confirm the split of responsibility between the township and the United Counties for roads, planning approvals, paramedics, and social services against current township and county documents.",
+    "Which comparator municipalities does the sponsor consider fair and useful?",
+    "How much manual data entry is the sponsor willing to do personally?",
+    "Should the curriculum be sequenced by domain, or by the council calendar so study tracks upcoming decisions?",
+    "Access: sponsor only, or a small invited circle from the start?",
+    "Is a public read-only view a real post-election goal, or out of scope?",
+    "What is the hard date? Debate schedule and election day set the phasing.",
+    "Commercial terms and who owns the build."
+  ]
+}

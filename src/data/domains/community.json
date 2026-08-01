@@ -1,0 +1,284 @@
+{
+  "id": "community",
+  "slug": "community",
+  "name": "Community",
+  "tagline": "Who lives here, how that is changing, what is being built, and what the township's own services record.",
+  "primer": [
+    "Almost everything in this domain comes from Statistics Canada, and almost every problem in this domain comes from geography. The census subdivision called North Glengarry matches the municipal boundary, which makes population, dwelling, and household counts directly usable. Below that level the geographies stop matching anything a council recognises: dissemination areas cross settlement boundaries, and the census agglomerations used for labour force reporting cover territory well beyond the township. A figure quoted at the wrong geography is not slightly wrong, it is about a different place.",
+    "The second constraint is timing. The census is quinquennial. Between cycles there is no authoritative population count, only estimates, and municipal population estimates for small rural municipalities carry meaningful error. Trend in this domain is measured in five-year steps, and any annual series purporting to describe township population is an estimate that must be labelled as one.",
+    "Age structure is the demographic fact that drives the most municipal consequence, because it moves slowly and predictably and shows up in service demand a decade later. The dependency ratio — population under fifteen and over sixty-four against the working-age population — is the compact form of it. In rural Eastern Ontario the older end of that ratio is generally the one that moves.",
+    "Building permits are the township's own record and are available annually, which makes them the most timely growth signal available. They come with two cautions. Declared construction value is the applicant's figure for fee purposes and is neither a market value nor an assessed value. And a permit is a plan, not a building: permits issued and units completed diverge, particularly when financing conditions change between application and construction.",
+    "Agriculture is the dominant land use in North Glengarry and the Census of Agriculture is the only consistent series describing it. Farm counts falling while average farm area rises is consolidation rather than decline, and the two figures have to be read together or the story is inverted. Operator age is the leading indicator in this sector, because it forecasts land transfer.",
+    "The service statistics at the end of this domain — library, recreation, facility usage — are the township's own numbers and are the least standardised data in the dashboard. They are worth carrying anyway: they are the only place where residents' actual use of what the township provides is recorded at all, and the Ontario Public Library Statistics submission gives at least the library a comparable multi-year basis."
+  ],
+  "tierSplit": [
+    { "item": "Building permits and enforcement", "owner": "township", "note": "Township issues permits and employs the Chief Building Official." },
+    { "item": "Recreation facilities and programming", "owner": "township" },
+    { "item": "Public library", "owner": "township", "note": "Governed by an appointed board under the Public Libraries Act; funded largely by the township." },
+    { "item": "Social housing and homelessness services", "owner": "county", "note": "SDG is the consolidated municipal service manager. Waitlists are reported county-wide." },
+    { "item": "Child care and early years", "owner": "county", "note": "County is the service system manager." },
+    { "item": "Long-term care", "owner": "county" },
+    { "item": "Economic development", "owner": "shared", "note": "Both tiers run programmes. Confirm the current division and any joint funding agreement." }
+  ],
+  "gaps": [
+    "Business openings and closures have no authoritative municipal source. Business licence data covers only licensed categories, which in a rural township is a small share of businesses. Any count here is partial by construction and must be labelled so.",
+    "Employment and labour force figures are not reliably available at the township level. The smallest geography with acceptable error is larger than the township and must be named wherever such a figure appears.",
+    "Tourism has no municipal measurement instrument. Accommodation counts and event attendance may be obtainable but are not a series.",
+    "Recreation registration and facility usage are reported inconsistently between years and may require manual entry from budget presentations."
+  ],
+  "sourceIds": [
+    "census-2021",
+    "census-2016",
+    "census-agriculture",
+    "building-permits",
+    "library-report",
+    "recreation-reports",
+    "sdg-social-services",
+    "mpac-roll"
+  ],
+  "lastUpdated": "2026-08-01",
+  "indicators": [
+    {
+      "id": "population",
+      "name": "Population",
+      "unit": "people",
+      "format": "number",
+      "geography": "North Glengarry, Township (census subdivision) — boundary matches the municipality",
+      "tier": "federal",
+      "tierNote": "Counted by Statistics Canada. The township does not produce its own count.",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Total population on census day. Census counts are subject to undercoverage, which Statistics Canada estimates separately; the count shown is the published count, not the adjusted estimate.",
+      "series": [
+        { "period": "2006", "value": 10723, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2011", "value": 10251, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2016", "value": 10109, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 10310, "source": { "sourceId": "census-2021", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "median-age",
+      "name": "Median age",
+      "unit": "years",
+      "format": "years",
+      "geography": "North Glengarry, Township (census subdivision)",
+      "tier": "federal",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Age at which half the population is older and half younger. A single figure summarising age structure; the full distribution is in the detail table and is more useful for service planning.",
+      "series": [
+        { "period": "2006", "value": 42.6, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2011", "value": 45.1, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2016", "value": 47.8, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 49.2, "source": { "sourceId": "census-2021", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "dependency-ratio",
+      "name": "Age dependency ratio",
+      "unit": "per 100",
+      "format": "number1",
+      "geography": "North Glengarry, Township (census subdivision)",
+      "tier": "federal",
+      "polarity": "neutral",
+      "definition": "Population aged under 15 plus population aged 65 and over, per 100 people aged 15 to 64. A demographic measure of the ratio between ages typically outside the labour force and ages typically within it. It describes age structure only and says nothing about employment, income, or need.",
+      "series": [
+        { "period": "2006", "value": 48.9, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2011", "value": 52.4, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2016", "value": 57.1, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 62.3, "source": { "sourceId": "census-2021", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "households",
+      "name": "Occupied private dwellings",
+      "unit": "dwellings",
+      "format": "number",
+      "geography": "North Glengarry, Township (census subdivision)",
+      "tier": "federal",
+      "polarity": "neutral",
+      "definition": "Count of private dwellings occupied by usual residents on census day. Used as the denominator for the per-household figures in the financial domain.",
+      "series": [
+        { "period": "2011", "value": 4285, "source": { "sourceId": "census-2016", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2016", "value": 4402, "source": { "sourceId": "census-2016", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 4487, "source": { "sourceId": "census-2021", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "permits-residential",
+      "name": "Residential building permits issued",
+      "unit": "permits",
+      "format": "number",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Count of residential building permits issued during the calendar year, all residential types including additions and renovations where a permit is required. A permit issued is not a dwelling completed.",
+      "series": [
+        { "period": "2020", "value": 128, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 161, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 147, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 112, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 104, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "permit-value",
+      "name": "Declared construction value, all permits",
+      "unit": "$",
+      "format": "currency",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "polarity": "neutral",
+      "definition": "Total construction value declared on permit applications during the year. Declared for fee-setting purposes by the applicant. It is not a market value, not an assessed value, and not audited.",
+      "series": [
+        { "period": "2020", "value": 21400000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 32800000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2022", "value": 29600000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 24100000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 22700000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "farms-count",
+      "name": "Census farms",
+      "unit": "farms",
+      "format": "number",
+      "geography": "North Glengarry, Township (census consolidated subdivision) — verify this matches the municipal boundary before quoting",
+      "tier": "federal",
+      "polarity": "neutral",
+      "headline": true,
+      "definition": "Number of agricultural operations reporting in the Census of Agriculture. Read alongside total farm area: a falling count with rising average area is consolidation, which has different implications than a falling count with falling area.",
+      "series": [
+        { "period": "2011", "value": 412, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2016", "value": 381, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2021", "value": 344, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    },
+    {
+      "id": "library-circulation",
+      "name": "Library circulation",
+      "unit": "items",
+      "format": "number",
+      "geography": "North Glengarry Public Library service area",
+      "tier": "township",
+      "polarity": "neutral",
+      "definition": "Total items circulated during the year, physical and electronic combined. The 2020 and 2021 figures reflect a period of restricted in-person service and are not comparable to adjacent years without that context.",
+      "series": [
+        { "period": "2020", "value": 38200, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample", "partial": true, "note": "Reduced in-person service during the year." },
+        { "period": "2021", "value": 41600, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample", "partial": true, "note": "Reduced in-person service during part of the year." },
+        { "period": "2022", "value": 52300, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2023", "value": 55900, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" },
+        { "period": "2024", "value": 57400, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" }
+      ],
+      "lastUpdated": "2026-08-01"
+    }
+  ],
+  "tables": [
+    {
+      "id": "age-structure",
+      "title": "Age structure",
+      "description": "Shares by age group across three census cycles. Movement between cycles is what forecasts service demand: the group aged 55 to 64 in one cycle is the group aged 65 to 74 in the next.",
+      "geography": "North Glengarry, Township (census subdivision)",
+      "tier": "federal",
+      "columns": [
+        { "key": "group", "label": "Age group", "align": "left" },
+        { "key": "c2011", "label": "2011 %", "format": "percent", "align": "right" },
+        { "key": "c2016", "label": "2016 %", "format": "percent", "align": "right" },
+        { "key": "c2021", "label": "2021 %", "format": "percent", "align": "right" }
+      ],
+      "rows": [
+        { "group": "0 to 14", "c2011": 15.8, "c2016": 14.9, "c2021": 14.3 },
+        { "group": "15 to 24", "c2011": 11.2, "c2016": 10.4, "c2021": 9.8 },
+        { "group": "25 to 44", "c2011": 21.6, "c2016": 20.3, "c2021": 20.1 },
+        { "group": "45 to 64", "c2011": 32.8, "c2016": 31.7, "c2021": 29.2 },
+        { "group": "65 to 84", "c2011": 16.1, "c2016": 19.4, "c2021": 22.6 },
+        { "group": "85 and over", "c2011": 2.5, "c2016": 3.3, "c2021": 4.0 }
+      ],
+      "source": { "sourceId": "census-2021", "locator": "Census profile, age characteristics" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample"
+    },
+    {
+      "id": "dwelling-tenure",
+      "title": "Households by tenure and dwelling type",
+      "description": "Tenure and dwelling type together describe the housing stock the township actually has, which constrains what kinds of household can move here.",
+      "geography": "North Glengarry, Township (census subdivision)",
+      "tier": "federal",
+      "columns": [
+        { "key": "category", "label": "Category", "align": "left" },
+        { "key": "count", "label": "Households", "format": "number", "align": "right" },
+        { "key": "share", "label": "Share", "format": "percent", "align": "right" }
+      ],
+      "rows": [
+        { "category": "Owner households", "count": 3510, "share": 78.2 },
+        { "category": "Renter households", "count": 977, "share": 21.8 },
+        { "category": "Single-detached house", "count": 3690, "share": 82.2 },
+        { "category": "Semi-detached and row", "count": 268, "share": 6.0 },
+        { "category": "Apartment, fewer than five storeys", "count": 462, "share": 10.3 },
+        { "category": "Movable dwelling and other", "count": 67, "share": 1.5 }
+      ],
+      "source": { "sourceId": "census-2021", "locator": "Census profile, dwelling characteristics" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "Tenure rows and dwelling-type rows are two separate breakdowns of the same household total and should not be added together."
+    },
+    {
+      "id": "agriculture-profile",
+      "title": "Agriculture profile",
+      "description": "Farm counts, area, and operator age across three agricultural census cycles. Operator age is the leading indicator for land transfer and the succession question that follows it.",
+      "geography": "North Glengarry — census consolidated subdivision. Confirm boundary alignment with the municipality.",
+      "tier": "federal",
+      "columns": [
+        { "key": "metric", "label": "Measure", "align": "left" },
+        { "key": "c2011", "label": "2011", "format": "number", "align": "right" },
+        { "key": "c2016", "label": "2016", "format": "number", "align": "right" },
+        { "key": "c2021", "label": "2021", "format": "number", "align": "right" }
+      ],
+      "rows": [
+        { "metric": "Total farms", "c2011": 412, "c2016": 381, "c2021": 344 },
+        { "metric": "Total farm area (acres)", "c2011": 118400, "c2016": 116900, "c2021": 114200 },
+        { "metric": "Average farm area (acres)", "c2011": 287, "c2016": 307, "c2021": 332 },
+        { "metric": "Dairy operations", "c2011": 121, "c2016": 104, "c2021": 88 },
+        { "metric": "Oilseed and grain operations", "c2011": 148, "c2016": 156, "c2021": 161 },
+        { "metric": "Operators aged 55 and over", "c2011": 268, "c2016": 289, "c2021": 301 }
+      ],
+      "source": { "sourceId": "census-agriculture", "locator": "Farm and farm operator data" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample",
+      "note": "Operator counts and farm counts are different denominators — a farm may report more than one operator."
+    },
+    {
+      "id": "permits-by-type",
+      "title": "Building permits by type, most recent closed year",
+      "description": "Permit counts and declared construction value by category. New dwelling units is the row that connects to the residential pipeline in the planning domain.",
+      "geography": "Township of North Glengarry",
+      "tier": "township",
+      "columns": [
+        { "key": "type", "label": "Permit type", "align": "left" },
+        { "key": "count", "label": "Permits", "format": "number", "align": "right" },
+        { "key": "units", "label": "Dwelling units", "format": "number", "align": "right" },
+        { "key": "value", "label": "Declared value", "format": "currency", "align": "right" }
+      ],
+      "rows": [
+        { "type": "New residential, single detached", "count": 31, "units": 31, "value": 12400000 },
+        { "type": "New residential, multi-unit", "count": 2, "units": 14, "value": 3900000 },
+        { "type": "Residential addition and renovation", "count": 71, "units": 0, "value": 2800000 },
+        { "type": "Agricultural", "count": 24, "units": 0, "value": 2100000 },
+        { "type": "Commercial", "count": 9, "units": 0, "value": 980000 },
+        { "type": "Industrial", "count": 3, "units": 0, "value": 420000 },
+        { "type": "Institutional and other", "count": 5, "units": 0, "value": 100000 }
+      ],
+      "source": { "sourceId": "building-permits", "locator": "Chief Building Official annual report" },
+      "lastUpdated": "2026-08-01",
+      "provenance": "sample"
+    }
+  ]
+}
