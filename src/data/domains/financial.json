@@ -12,25 +12,56 @@
     "The Financial Information Return is the backbone of this domain. Every Ontario municipality files one annually on the same schedules, which makes it the only genuinely multi-year, comparable financial source available without transcribing budget books. It is filed months after year end, so the most recent year here will usually lag. Audited statements carry the detail the return flattens, and budget by-laws carry the plan the actuals are measured against."
   ],
   "tierSplit": [
-    { "item": "Township tax levy", "owner": "township", "note": "Set by township council in the annual budget and rate by-law." },
-    { "item": "County tax levy", "owner": "county", "note": "Set by SDG county council, apportioned across member municipalities by weighted assessment. Township council members sit on county council." },
-    { "item": "Education tax levy", "owner": "province", "note": "Rates set by the province. Neither council has any discretion over this portion." },
-    { "item": "Property assessment", "owner": "province", "note": "Valued by MPAC, a provincial corporation. The municipality does not assess property and cannot change a valuation." },
-    { "item": "Ontario Municipal Partnership Fund allocation", "owner": "province", "note": "Formula-driven unconditional grant announced annually." }
+    {
+      "item": "Township tax levy",
+      "owner": "township",
+      "note": "Set by township council in the annual budget and rate by-law."
+    },
+    {
+      "item": "County tax levy",
+      "owner": "county",
+      "note": "Set by SDG county council, apportioned across member municipalities by weighted assessment. Township council members sit on county council."
+    },
+    {
+      "item": "Education tax levy",
+      "owner": "province",
+      "note": "Rates set by the province. Neither council has any discretion over this portion."
+    },
+    {
+      "item": "Property assessment",
+      "owner": "province",
+      "note": "Valued by MPAC, a provincial corporation. The municipality does not assess property and cannot change a valuation."
+    },
+    {
+      "item": "Ontario Municipal Partnership Fund allocation",
+      "owner": "province",
+      "note": "Formula-driven unconditional grant announced annually."
+    }
   ],
   "gaps": [
     "Budget-versus-actual by department requires pairing each year's budget by-law with the same year's audited statements. Departmental groupings change between documents and must be reconciled by hand.",
     "Grants received by program are not reported as a single series anywhere. They have to be assembled from council reports, the Financial Information Return revenue schedules, and individual grant agreements.",
-    "The comparator municipality set has not been chosen. No comparison is shown until the sponsor confirms which municipalities are fair."
+    "The comparator municipality set has not been chosen. No comparison is shown until the sponsor confirms which municipalities are fair.",
+    "Debt is reported on different bases in different documents: the 2025 budget states a start-of-year position split between rate-funded and tax-supported, while the Financial Information Return reports year-end principal outstanding. Do not mix the two in one series without stating the basis."
   ],
   "sourceIds": [
     "fir",
+    "fir-midas",
+    "fir-opendata",
+    "audited-fs-2023",
+    "audited-fs-2022",
+    "audited-fs-2021",
     "audited-fs",
-    "budget-current",
-    "budget-prior",
+    "budget-2025",
+    "budget-2024",
+    "budget-2023",
+    "budget-2022",
+    "budget-index",
     "tax-rate-bylaw",
+    "fees-charges-bylaw",
     "mpac-roll",
     "grant-agreements",
+    "ocif",
     "county-budget",
     "development-charges",
     "fim-fir-peers",
@@ -50,11 +81,56 @@
       "headline": true,
       "definition": "Total dollars raised from property taxation for township purposes in the year, as levied by the annual tax rate by-law. Excludes payments in lieu of taxes, user fees, and grants.",
       "series": [
-        { "period": "2020", "value": 9850000, "source": { "sourceId": "fir", "locator": "Schedule 10, own purposes taxation" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 10150000, "source": { "sourceId": "fir", "locator": "Schedule 10, own purposes taxation" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 10640000, "source": { "sourceId": "fir", "locator": "Schedule 10, own purposes taxation" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 11380000, "source": { "sourceId": "fir", "locator": "Schedule 10, own purposes taxation" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 12150000, "source": { "sourceId": "fir", "locator": "Schedule 10, own purposes taxation" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 9850000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, own purposes taxation"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 10150000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, own purposes taxation"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 10640000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, own purposes taxation"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 11380000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, own purposes taxation"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 12150000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, own purposes taxation"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -70,11 +146,60 @@
       "definition": "Total township levy divided by the number of occupied private dwellings. A distribution average, not an average tax bill: it does not account for property class mix, and no individual household pays this figure.",
       "methodology": "Levy from the Financial Information Return; household count interpolated between census years and held flat between them. The interpolation is why intercensal years are marked as estimated.",
       "series": [
-        { "period": "2020", "value": 2210, "source": { "sourceId": "fir", "locator": "Schedule 10" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2021", "value": 2262, "source": { "sourceId": "census-2021", "locator": "Occupied private dwellings" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 2358, "source": { "sourceId": "fir", "locator": "Schedule 10" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 2504, "source": { "sourceId": "fir", "locator": "Schedule 10" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 2652, "source": { "sourceId": "fir", "locator": "Schedule 10" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2020",
+          "value": 2210,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2021",
+          "value": 2262,
+          "source": {
+            "sourceId": "census-2021",
+            "locator": "Occupied private dwellings"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 2358,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 2504,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 2652,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -88,11 +213,56 @@
       "polarity": "neutral",
       "definition": "Total operating expenditure for the year on a Financial Information Return basis, before amortization adjustments. Excludes capital expenditure.",
       "series": [
-        { "period": "2020", "value": 17420000, "source": { "sourceId": "fir", "locator": "Schedule 40, total expenses" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 17960000, "source": { "sourceId": "fir", "locator": "Schedule 40, total expenses" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 19240000, "source": { "sourceId": "fir", "locator": "Schedule 40, total expenses" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 20510000, "source": { "sourceId": "fir", "locator": "Schedule 40, total expenses" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 21830000, "source": { "sourceId": "fir", "locator": "Schedule 40, total expenses" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 17420000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, total expenses"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 17960000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, total expenses"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 19240000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, total expenses"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 20510000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, total expenses"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 21830000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, total expenses"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -106,11 +276,56 @@
       "polarity": "neutral",
       "definition": "Actual capital expenditure in the year across all asset categories, on a Financial Information Return basis. Capital spending is lumpy by nature: a single bridge or plant upgrade can double a year's figure, so read the five-year pattern rather than any one year.",
       "series": [
-        { "period": "2020", "value": 4120000, "source": { "sourceId": "fir", "locator": "Schedule 51, total capital" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 6740000, "source": { "sourceId": "fir", "locator": "Schedule 51, total capital" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 3980000, "source": { "sourceId": "fir", "locator": "Schedule 51, total capital" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 5310000, "source": { "sourceId": "fir", "locator": "Schedule 51, total capital" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 4870000, "source": { "sourceId": "fir", "locator": "Schedule 51, total capital" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 4120000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 51, total capital"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 6740000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 51, total capital"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 3980000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 51, total capital"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 5310000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 51, total capital"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 4870000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 51, total capital"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -125,11 +340,56 @@
       "headline": true,
       "definition": "Combined year-end balance of discretionary reserves and reserve funds, including obligatory reserve funds. The total is not freely spendable: obligatory reserve funds such as development charges and the Canada Community-Building Fund are restricted by statute. Read the balance by purpose in the detail table below before drawing any conclusion from the total.",
       "series": [
-        { "period": "2020", "value": 8940000, "source": { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 9310000, "source": { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 8480000, "source": { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 7920000, "source": { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 7640000, "source": { "sourceId": "fir", "locator": "Schedule 60, continuity of reserves" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 8940000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60, continuity of reserves"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 9310000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60, continuity of reserves"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 8480000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60, continuity of reserves"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 7920000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60, continuity of reserves"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 7640000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60, continuity of reserves"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -143,11 +403,61 @@
       "polarity": "neutral",
       "definition": "Total reserves and reserve funds divided by occupied private dwellings. Used because absolute reserve balances are not readable across time as population changes. Household counts between census years are interpolated.",
       "series": [
-        { "period": "2020", "value": 2005, "source": { "sourceId": "fir", "locator": "Schedule 60" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2021", "value": 2075, "source": { "sourceId": "fir", "locator": "Schedule 60" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2022", "value": 1879, "source": { "sourceId": "fir", "locator": "Schedule 60" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 1743, "source": { "sourceId": "fir", "locator": "Schedule 60" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 1667, "source": { "sourceId": "fir", "locator": "Schedule 60" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2020",
+          "value": 2005,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2021",
+          "value": 2075,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2022",
+          "value": 1879,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 1743,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 1667,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 60"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -160,13 +470,70 @@
       "tier": "township",
       "polarity": "neutral",
       "headline": true,
-      "definition": "Principal outstanding on long-term debt at year end, for township purposes. Excludes debt issued by the county or other bodies.",
+      "definition": "Principal outstanding on long-term debt at year end, for township purposes. Excludes debt issued by the county or other bodies. The 2025 budget splits the position between rate-funded and tax-supported debt, which is the more decision-relevant division: rate-funded debt is repaid by water and wastewater customers, tax-supported debt by every ratepayer including those on private wells and septic.",
       "series": [
-        { "period": "2020", "value": 6280000, "source": { "sourceId": "fir", "locator": "Schedule 70, long-term liabilities" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 5810000, "source": { "sourceId": "fir", "locator": "Schedule 70, long-term liabilities" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 5320000, "source": { "sourceId": "fir", "locator": "Schedule 70, long-term liabilities" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 6950000, "source": { "sourceId": "fir", "locator": "Schedule 70, long-term liabilities" }, "recorded": "2026-08-01", "provenance": "sample", "note": "Step-up reflects new issuance; confirm which project against the debenture by-law." },
-        { "period": "2024", "value": 6410000, "source": { "sourceId": "fir", "locator": "Schedule 70, long-term liabilities" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 6280000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 70, long-term liabilities"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 5810000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 70, long-term liabilities"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 5320000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 70, long-term liabilities"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 6950000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 70, long-term liabilities"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "note": "Step-up reflects new issuance; confirm which project against the debenture by-law."
+        },
+        {
+          "period": "2024",
+          "value": 6410000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 70, long-term liabilities"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2025",
+          "value": 9570000,
+          "source": {
+            "sourceId": "budget-2025",
+            "locator": "Debt position at 1 January 2025"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sourced",
+          "note": "Stated in the approved 2025 budget as total debt at the start of the year: $9.57 million, of which $6.06 million is funded through water and wastewater rates and $3.5 million is tax-supported. Earlier years in this series are placeholders and are not on the same basis until confirmed."
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -181,16 +548,64 @@
       "definition": "Annual principal and interest payments on long-term debt expressed as a percentage of own-source revenue. The province caps this at 25 percent through the Annual Repayment Limit. Distance from the limit describes borrowing room, not whether past borrowing was sound.",
       "methodology": "Ministry of Municipal Affairs and Housing calculates the Annual Repayment Limit from the Financial Information Return and issues it to the municipality. Use the ministry figure rather than recomputing it.",
       "series": [
-        { "period": "2020", "value": 5.8, "source": { "sourceId": "fir", "locator": "Annual Repayment Limit statement" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 5.4, "source": { "sourceId": "fir", "locator": "Annual Repayment Limit statement" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 5.1, "source": { "sourceId": "fir", "locator": "Annual Repayment Limit statement" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 6.3, "source": { "sourceId": "fir", "locator": "Annual Repayment Limit statement" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 6.1, "source": { "sourceId": "fir", "locator": "Annual Repayment Limit statement" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 5.8,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Annual Repayment Limit statement"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 5.4,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Annual Repayment Limit statement"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 5.1,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Annual Repayment Limit statement"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 6.3,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Annual Repayment Limit statement"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 6.1,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Annual Repayment Limit statement"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "target": {
         "value": 25,
         "label": "Provincial Annual Repayment Limit",
-        "source": { "sourceId": "fir", "locator": "O. Reg. 403/02" },
+        "source": {
+          "sourceId": "fir",
+          "locator": "O. Reg. 403/02"
+        },
         "provenance": "sample"
       },
       "lastUpdated": "2026-08-01"
@@ -206,11 +621,56 @@
       "headline": true,
       "definition": "Dollars transferred from the operating budget to capital and to reserves in the year. This is the amount of current-year taxation being applied to renewing assets rather than to running services, and it is the operating-side counterpart to the renewal funding gap in the infrastructure domain.",
       "series": [
-        { "period": "2020", "value": 2340000, "source": { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 2410000, "source": { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 2280000, "source": { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 2520000, "source": { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 2690000, "source": { "sourceId": "fir", "locator": "Schedule 40, transfers to own funds" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 2340000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, transfers to own funds"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 2410000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, transfers to own funds"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 2280000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, transfers to own funds"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 2520000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, transfers to own funds"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 2690000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 40, transfers to own funds"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -225,11 +685,57 @@
       "polarity": "neutral",
       "definition": "Total conditional and unconditional grants received from the provincial and federal governments in the year, operating and capital combined. Capital grants are episodic and drive most of the year-to-year movement.",
       "series": [
-        { "period": "2020", "value": 3860000, "source": { "sourceId": "fir", "locator": "Schedule 10, grants" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 5240000, "source": { "sourceId": "fir", "locator": "Schedule 10, grants" }, "recorded": "2026-08-01", "provenance": "sample", "note": "Elevated year; confirm whether pandemic-era transfers are included." },
-        { "period": "2022", "value": 3610000, "source": { "sourceId": "fir", "locator": "Schedule 10, grants" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 3940000, "source": { "sourceId": "fir", "locator": "Schedule 10, grants" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 3720000, "source": { "sourceId": "fir", "locator": "Schedule 10, grants" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 3860000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, grants"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 5240000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, grants"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "note": "Elevated year; confirm whether pandemic-era transfers are included."
+        },
+        {
+          "period": "2022",
+          "value": 3610000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, grants"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 3940000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, grants"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 3720000,
+          "source": {
+            "sourceId": "fir",
+            "locator": "Schedule 10, grants"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -244,11 +750,56 @@
       "polarity": "neutral",
       "definition": "Total current value assessment across all property classes for taxation purposes. Movement in this figure reflects new construction and appeals, not market appreciation, because the province has held the valuation date fixed through several postponed reassessment cycles.",
       "series": [
-        { "period": "2020", "value": 1284000000, "source": { "sourceId": "mpac-roll", "locator": "Returned roll summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 1301000000, "source": { "sourceId": "mpac-roll", "locator": "Returned roll summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 1319000000, "source": { "sourceId": "mpac-roll", "locator": "Returned roll summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 1342000000, "source": { "sourceId": "mpac-roll", "locator": "Returned roll summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 1368000000, "source": { "sourceId": "mpac-roll", "locator": "Returned roll summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 1284000000,
+          "source": {
+            "sourceId": "mpac-roll",
+            "locator": "Returned roll summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 1301000000,
+          "source": {
+            "sourceId": "mpac-roll",
+            "locator": "Returned roll summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 1319000000,
+          "source": {
+            "sourceId": "mpac-roll",
+            "locator": "Returned roll summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 1342000000,
+          "source": {
+            "sourceId": "mpac-roll",
+            "locator": "Returned roll summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 1368000000,
+          "source": {
+            "sourceId": "mpac-roll",
+            "locator": "Returned roll summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     }
@@ -261,26 +812,118 @@
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "purpose", "label": "Purpose", "align": "left" },
-        { "key": "type", "label": "Type", "align": "left" },
-        { "key": "y2022", "label": "2022", "format": "currency", "align": "right" },
-        { "key": "y2023", "label": "2023", "format": "currency", "align": "right" },
-        { "key": "y2024", "label": "2024", "format": "currency", "align": "right" }
+        {
+          "key": "purpose",
+          "label": "Purpose",
+          "align": "left"
+        },
+        {
+          "key": "type",
+          "label": "Type",
+          "align": "left"
+        },
+        {
+          "key": "y2022",
+          "label": "2022",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "y2023",
+          "label": "2023",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "y2024",
+          "label": "2024",
+          "format": "currency",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "purpose": "Working funds", "type": "Discretionary", "y2022": 1450000, "y2023": 1380000, "y2024": 1310000 },
-        { "purpose": "Roads and bridges capital", "type": "Discretionary", "y2022": 2240000, "y2023": 1960000, "y2024": 1780000 },
-        { "purpose": "Water capital", "type": "Reserve fund", "y2022": 1180000, "y2023": 1220000, "y2024": 1290000 },
-        { "purpose": "Wastewater capital", "type": "Reserve fund", "y2022": 980000, "y2023": 1010000, "y2024": 1060000 },
-        { "purpose": "Fire equipment replacement", "type": "Discretionary", "y2022": 720000, "y2023": 640000, "y2024": 510000 },
-        { "purpose": "Facilities and recreation", "type": "Discretionary", "y2022": 610000, "y2023": 540000, "y2024": 490000 },
-        { "purpose": "Canada Community-Building Fund", "type": "Obligatory", "y2022": 840000, "y2023": 760000, "y2024": 690000 },
-        { "purpose": "Development charges", "type": "Obligatory", "y2022": 0, "y2023": 0, "y2024": 0 },
-        { "purpose": "Parkland cash-in-lieu", "type": "Obligatory", "y2022": 120000, "y2023": 130000, "y2024": 145000 },
-        { "purpose": "Election", "type": "Discretionary", "y2022": 60000, "y2023": 80000, "y2024": 100000 },
-        { "purpose": "Insurance and self-funding", "type": "Discretionary", "y2022": 280000, "y2023": 200000, "y2024": 265000 }
+        {
+          "purpose": "Working funds",
+          "type": "Discretionary",
+          "y2022": 1450000,
+          "y2023": 1380000,
+          "y2024": 1310000
+        },
+        {
+          "purpose": "Roads and bridges capital",
+          "type": "Discretionary",
+          "y2022": 2240000,
+          "y2023": 1960000,
+          "y2024": 1780000
+        },
+        {
+          "purpose": "Water capital",
+          "type": "Reserve fund",
+          "y2022": 1180000,
+          "y2023": 1220000,
+          "y2024": 1290000
+        },
+        {
+          "purpose": "Wastewater capital",
+          "type": "Reserve fund",
+          "y2022": 980000,
+          "y2023": 1010000,
+          "y2024": 1060000
+        },
+        {
+          "purpose": "Fire equipment replacement",
+          "type": "Discretionary",
+          "y2022": 720000,
+          "y2023": 640000,
+          "y2024": 510000
+        },
+        {
+          "purpose": "Facilities and recreation",
+          "type": "Discretionary",
+          "y2022": 610000,
+          "y2023": 540000,
+          "y2024": 490000
+        },
+        {
+          "purpose": "Canada Community-Building Fund",
+          "type": "Obligatory",
+          "y2022": 840000,
+          "y2023": 760000,
+          "y2024": 690000
+        },
+        {
+          "purpose": "Development charges",
+          "type": "Obligatory",
+          "y2022": 0,
+          "y2023": 0,
+          "y2024": 0
+        },
+        {
+          "purpose": "Parkland cash-in-lieu",
+          "type": "Obligatory",
+          "y2022": 120000,
+          "y2023": 130000,
+          "y2024": 145000
+        },
+        {
+          "purpose": "Election",
+          "type": "Discretionary",
+          "y2022": 60000,
+          "y2023": 80000,
+          "y2024": 100000
+        },
+        {
+          "purpose": "Insurance and self-funding",
+          "type": "Discretionary",
+          "y2022": 280000,
+          "y2023": 200000,
+          "y2024": 265000
+        }
       ],
-      "source": { "sourceId": "audited-fs", "locator": "Note on reserves and reserve funds" },
+      "source": {
+        "sourceId": "audited-fs",
+        "locator": "Note on reserves and reserve funds"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "The development charges row shows zero because it is not yet confirmed whether the township has a development charges by-law in force. Confirm before reading the zero as a balance rather than an absence of the instrument."
@@ -292,22 +935,91 @@
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "class", "label": "Property class", "align": "left" },
-        { "key": "ratio", "label": "Tax ratio", "format": "number1", "align": "right" },
-        { "key": "y2022", "label": "2022", "format": "number", "align": "right" },
-        { "key": "y2023", "label": "2023", "format": "number", "align": "right" },
-        { "key": "y2024", "label": "2024", "format": "number", "align": "right" }
+        {
+          "key": "class",
+          "label": "Property class",
+          "align": "left"
+        },
+        {
+          "key": "ratio",
+          "label": "Tax ratio",
+          "format": "number1",
+          "align": "right"
+        },
+        {
+          "key": "y2022",
+          "label": "2022",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "y2023",
+          "label": "2023",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "y2024",
+          "label": "2024",
+          "format": "number",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "class": "Residential", "ratio": 1.0, "y2022": 0.00812, "y2023": 0.00861, "y2024": 0.00909 },
-        { "class": "Multi-residential", "ratio": 1.0, "y2022": 0.00812, "y2023": 0.00861, "y2024": 0.00909 },
-        { "class": "Farm", "ratio": 0.25, "y2022": 0.00203, "y2023": 0.00215, "y2024": 0.00227 },
-        { "class": "Managed forest", "ratio": 0.25, "y2022": 0.00203, "y2023": 0.00215, "y2024": 0.00227 },
-        { "class": "Commercial occupied", "ratio": 1.55, "y2022": 0.01259, "y2023": 0.01335, "y2024": 0.01409 },
-        { "class": "Industrial occupied", "ratio": 2.06, "y2022": 0.01673, "y2023": 0.01774, "y2024": 0.01873 },
-        { "class": "Pipeline", "ratio": 1.62, "y2022": 0.01315, "y2023": 0.01395, "y2024": 0.01473 }
+        {
+          "class": "Residential",
+          "ratio": 1.0,
+          "y2022": 0.00812,
+          "y2023": 0.00861,
+          "y2024": 0.00909
+        },
+        {
+          "class": "Multi-residential",
+          "ratio": 1.0,
+          "y2022": 0.00812,
+          "y2023": 0.00861,
+          "y2024": 0.00909
+        },
+        {
+          "class": "Farm",
+          "ratio": 0.25,
+          "y2022": 0.00203,
+          "y2023": 0.00215,
+          "y2024": 0.00227
+        },
+        {
+          "class": "Managed forest",
+          "ratio": 0.25,
+          "y2022": 0.00203,
+          "y2023": 0.00215,
+          "y2024": 0.00227
+        },
+        {
+          "class": "Commercial occupied",
+          "ratio": 1.55,
+          "y2022": 0.01259,
+          "y2023": 0.01335,
+          "y2024": 0.01409
+        },
+        {
+          "class": "Industrial occupied",
+          "ratio": 2.06,
+          "y2022": 0.01673,
+          "y2023": 0.01774,
+          "y2024": 0.01873
+        },
+        {
+          "class": "Pipeline",
+          "ratio": 1.62,
+          "y2022": 0.01315,
+          "y2023": 0.01395,
+          "y2024": 0.01473
+        }
       ],
-      "source": { "sourceId": "tax-rate-bylaw", "locator": "Schedule A" },
+      "source": {
+        "sourceId": "tax-rate-bylaw",
+        "locator": "Schedule A"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Tax ratios govern how the levy is distributed between classes. Changing a ratio shifts burden between classes without changing the total levy — a distinct decision from changing the levy itself."
@@ -319,27 +1031,126 @@
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "dept", "label": "Department", "align": "left" },
-        { "key": "budget", "label": "Approved", "format": "currency", "align": "right" },
-        { "key": "actual", "label": "Actual", "format": "currency", "align": "right" },
-        { "key": "variance", "label": "Variance", "format": "currency", "align": "right" },
-        { "key": "pct", "label": "Variance %", "format": "percent", "align": "right" }
+        {
+          "key": "dept",
+          "label": "Department",
+          "align": "left"
+        },
+        {
+          "key": "budget",
+          "label": "Approved",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "actual",
+          "label": "Actual",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "variance",
+          "label": "Variance",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "pct",
+          "label": "Variance %",
+          "format": "percent",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "dept": "General government", "budget": 2180000, "actual": 2246000, "variance": 66000, "pct": 3.0 },
-        { "dept": "Protection: fire", "budget": 1420000, "actual": 1487000, "variance": 67000, "pct": 4.7 },
-        { "dept": "Protection: policing", "budget": 2360000, "actual": 2360000, "variance": 0, "pct": 0.0 },
-        { "dept": "Protection: building and by-law", "budget": 540000, "actual": 512000, "variance": -28000, "pct": -5.2 },
-        { "dept": "Transportation: roads", "budget": 5240000, "actual": 5618000, "variance": 378000, "pct": 7.2 },
-        { "dept": "Transportation: winter control", "budget": 1180000, "actual": 1394000, "variance": 214000, "pct": 18.1 },
-        { "dept": "Environmental: water", "budget": 1640000, "actual": 1602000, "variance": -38000, "pct": -2.3 },
-        { "dept": "Environmental: wastewater", "budget": 1290000, "actual": 1258000, "variance": -32000, "pct": -2.5 },
-        { "dept": "Environmental: waste", "budget": 1120000, "actual": 1163000, "variance": 43000, "pct": 3.8 },
-        { "dept": "Recreation and culture", "budget": 1980000, "actual": 1921000, "variance": -59000, "pct": -3.0 },
-        { "dept": "Library", "budget": 480000, "actual": 476000, "variance": -4000, "pct": -0.8 },
-        { "dept": "Planning and development", "budget": 610000, "actual": 573000, "variance": -37000, "pct": -6.1 }
+        {
+          "dept": "General government",
+          "budget": 2180000,
+          "actual": 2246000,
+          "variance": 66000,
+          "pct": 3.0
+        },
+        {
+          "dept": "Protection: fire",
+          "budget": 1420000,
+          "actual": 1487000,
+          "variance": 67000,
+          "pct": 4.7
+        },
+        {
+          "dept": "Protection: policing",
+          "budget": 2360000,
+          "actual": 2360000,
+          "variance": 0,
+          "pct": 0.0
+        },
+        {
+          "dept": "Protection: building and by-law",
+          "budget": 540000,
+          "actual": 512000,
+          "variance": -28000,
+          "pct": -5.2
+        },
+        {
+          "dept": "Transportation: roads",
+          "budget": 5240000,
+          "actual": 5618000,
+          "variance": 378000,
+          "pct": 7.2
+        },
+        {
+          "dept": "Transportation: winter control",
+          "budget": 1180000,
+          "actual": 1394000,
+          "variance": 214000,
+          "pct": 18.1
+        },
+        {
+          "dept": "Environmental: water",
+          "budget": 1640000,
+          "actual": 1602000,
+          "variance": -38000,
+          "pct": -2.3
+        },
+        {
+          "dept": "Environmental: wastewater",
+          "budget": 1290000,
+          "actual": 1258000,
+          "variance": -32000,
+          "pct": -2.5
+        },
+        {
+          "dept": "Environmental: waste",
+          "budget": 1120000,
+          "actual": 1163000,
+          "variance": 43000,
+          "pct": 3.8
+        },
+        {
+          "dept": "Recreation and culture",
+          "budget": 1980000,
+          "actual": 1921000,
+          "variance": -59000,
+          "pct": -3.0
+        },
+        {
+          "dept": "Library",
+          "budget": 480000,
+          "actual": 476000,
+          "variance": -4000,
+          "pct": -0.8
+        },
+        {
+          "dept": "Planning and development",
+          "budget": 610000,
+          "actual": 573000,
+          "variance": -37000,
+          "pct": -6.1
+        }
       ],
-      "source": { "sourceId": "audited-fs", "locator": "Schedule of segment disclosure" },
+      "source": {
+        "sourceId": "audited-fs",
+        "locator": "Schedule of segment disclosure"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Departmental groupings differ between the budget by-law and the audited statements. Reconciliation is manual and should be re-checked whenever either document changes format."
@@ -351,22 +1162,93 @@
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "project", "label": "Project", "align": "left" },
-        { "key": "owner", "label": "Owner", "align": "left" },
-        { "key": "approved", "label": "Approved budget", "format": "currency", "align": "right" },
-        { "key": "spent", "label": "Spend to date", "format": "currency", "align": "right" },
-        { "key": "status", "label": "Status", "align": "left" },
-        { "key": "asAt", "label": "Reported as at", "align": "left" }
+        {
+          "key": "project",
+          "label": "Project",
+          "align": "left"
+        },
+        {
+          "key": "owner",
+          "label": "Owner",
+          "align": "left"
+        },
+        {
+          "key": "approved",
+          "label": "Approved budget",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "spent",
+          "label": "Spend to date",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "align": "left"
+        },
+        {
+          "key": "asAt",
+          "label": "Reported as at",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "project": "Water treatment plant upgrade", "owner": "Township", "approved": 4200000, "spent": 3180000, "status": "In construction", "asAt": "2026-03" },
-        { "project": "Bridge replacement, structure 14", "owner": "Township", "approved": 1650000, "spent": 1650000, "status": "Complete", "asAt": "2025-11" },
-        { "project": "Arena roof and refrigeration", "owner": "Township", "approved": 1900000, "spent": 240000, "status": "Design", "asAt": "2026-04" },
-        { "project": "Road resurfacing programme, annual", "owner": "Township", "approved": 1400000, "spent": 1120000, "status": "In progress", "asAt": "2026-06" },
-        { "project": "Pumper truck replacement", "owner": "Township", "approved": 850000, "spent": 0, "status": "Approved, not ordered", "asAt": "2026-06" },
-        { "project": "County road reconstruction through settlement area", "owner": "County", "approved": 3400000, "spent": 900000, "status": "In construction", "asAt": "2026-05" }
+        {
+          "project": "Water treatment plant upgrade",
+          "owner": "Township",
+          "approved": 4200000,
+          "spent": 3180000,
+          "status": "In construction",
+          "asAt": "2026-03"
+        },
+        {
+          "project": "Bridge replacement, structure 14",
+          "owner": "Township",
+          "approved": 1650000,
+          "spent": 1650000,
+          "status": "Complete",
+          "asAt": "2025-11"
+        },
+        {
+          "project": "Arena roof and refrigeration",
+          "owner": "Township",
+          "approved": 1900000,
+          "spent": 240000,
+          "status": "Design",
+          "asAt": "2026-04"
+        },
+        {
+          "project": "Road resurfacing programme, annual",
+          "owner": "Township",
+          "approved": 1400000,
+          "spent": 1120000,
+          "status": "In progress",
+          "asAt": "2026-06"
+        },
+        {
+          "project": "Pumper truck replacement",
+          "owner": "Township",
+          "approved": 850000,
+          "spent": 0,
+          "status": "Approved, not ordered",
+          "asAt": "2026-06"
+        },
+        {
+          "project": "County road reconstruction through settlement area",
+          "owner": "County",
+          "approved": 3400000,
+          "spent": 900000,
+          "status": "In construction",
+          "asAt": "2026-05"
+        }
       ],
-      "source": { "sourceId": "council-agendas", "locator": "Capital project status reports" },
+      "source": {
+        "sourceId": "council-agendas",
+        "locator": "Capital project status reports"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "The final row is a county project inside township boundaries. It is shown because residents experience it as local work, and excluded from township capital totals because the township neither budgets nor controls it."

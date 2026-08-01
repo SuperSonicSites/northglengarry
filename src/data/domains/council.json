@@ -12,11 +12,35 @@
     "Township council members also sit on county council, which decides county roads, paramedic services, social services, and several planning approvals affecting the township. A complete picture of what a North Glengarry council member votes on requires both agendas, and the decision record here labels which body made each decision."
   ],
   "tierSplit": [
-    { "item": "Township by-laws, budget, and levy", "owner": "township" },
-    { "item": "County budget, levy, and county roads programme", "owner": "county", "note": "Decided at county council, where township members sit alongside members from other SDG municipalities." },
-    { "item": "Closed meeting investigation", "owner": "other", "note": "Conducted by an appointed investigator or the Ontario Ombudsman. Confirm which body the township has appointed." },
-    { "item": "Integrity commissioner and code of conduct", "owner": "township", "note": "The Municipal Act requires the appointment of an integrity commissioner. Confirm the current appointment and reporting record." },
-    { "item": "Municipal elections", "owner": "township", "note": "Administered by the township clerk under the Municipal Elections Act." }
+    {
+      "item": "Township by-laws, budget, and levy",
+      "owner": "township"
+    },
+    {
+      "item": "County budget, levy, and county roads programme",
+      "owner": "county",
+      "note": "Decided at county council, where township members sit alongside members from other SDG municipalities."
+    },
+    {
+      "item": "Representation at county council",
+      "owner": "county",
+      "note": "SDG Counties Council has twelve members drawn from the six local municipalities. North Glengarry sends two: its mayor and deputy-mayor."
+    },
+    {
+      "item": "Closed meeting investigation",
+      "owner": "other",
+      "note": "Conducted by an appointed investigator or the Ontario Ombudsman. Confirm which body the township has appointed."
+    },
+    {
+      "item": "Integrity commissioner and code of conduct",
+      "owner": "township",
+      "note": "The Municipal Act requires the appointment of an integrity commissioner. Confirm the current appointment and reporting record."
+    },
+    {
+      "item": "Municipal elections",
+      "owner": "township",
+      "note": "Administered by the township clerk under the Municipal Elections Act."
+    }
   ],
   "gaps": [
     "Vote records are only available where a recorded vote was requested or is required. Many decisions carry no recorded vote, in which case the record shows the resolution as carried without member-level detail. That absence should be shown as an absence, not filled in.",
@@ -26,10 +50,13 @@
   "sourceIds": [
     "council-agendas",
     "strategic-plan",
+    "corporate-strategy",
     "county-council",
-    "budget-current",
-    "audited-fs",
-    "county-budget"
+    "budget-2025",
+    "budget-2024",
+    "audited-fs-2023",
+    "county-budget",
+    "bylaws-index"
   ],
   "lastUpdated": "2026-08-01",
   "indicators": [
@@ -44,10 +71,46 @@
       "headline": true,
       "definition": "Count of council decisions transcribed into the decision record below, by year of decision. This measures the completeness of this dashboard's own record, not council's activity. It exists so that coverage is visible: a thin year here means transcription is outstanding, not that council was idle.",
       "series": [
-        { "period": "2022", "value": 4, "source": { "sourceId": "council-agendas", "locator": "Decision record, this dashboard" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 3, "source": { "sourceId": "council-agendas", "locator": "Decision record, this dashboard" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 3, "source": { "sourceId": "council-agendas", "locator": "Decision record, this dashboard" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2025", "value": 2, "source": { "sourceId": "council-agendas", "locator": "Decision record, this dashboard" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2022",
+          "value": 4,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Decision record, this dashboard"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 3,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Decision record, this dashboard"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 3,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Decision record, this dashboard"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2025",
+          "value": 2,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Decision record, this dashboard"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -61,11 +124,61 @@
       "polarity": "neutral",
       "definition": "Percentage of regular council meetings in the year that included at least one closed session. Closed sessions are permitted for the purposes enumerated in the Municipal Act and the resolution to close must state the applicable exception. This figure counts occurrence; it does not evaluate whether any closure was appropriate.",
       "series": [
-        { "period": "2021", "value": 38.0, "source": { "sourceId": "council-agendas", "locator": "Agendas and minutes" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2022", "value": 42.0, "source": { "sourceId": "council-agendas", "locator": "Agendas and minutes" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 45.0, "source": { "sourceId": "council-agendas", "locator": "Agendas and minutes" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 44.0, "source": { "sourceId": "council-agendas", "locator": "Agendas and minutes" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2025", "value": 47.0, "source": { "sourceId": "council-agendas", "locator": "Agendas and minutes" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2021",
+          "value": 38.0,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Agendas and minutes"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2022",
+          "value": 42.0,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Agendas and minutes"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 45.0,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Agendas and minutes"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 44.0,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Agendas and minutes"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2025",
+          "value": 47.0,
+          "source": {
+            "sourceId": "council-agendas",
+            "locator": "Agendas and minutes"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -80,9 +193,36 @@
       "headline": true,
       "definition": "Percentage of the strategic plan's stated priorities that carry an explicit, checkable measure of progress. A priority without a measure can be advanced or abandoned without either being demonstrable. This describes the plan as written; it does not assess whether the priorities themselves are well chosen.",
       "series": [
-        { "period": "2023", "value": 33.3, "source": { "sourceId": "strategic-plan", "locator": "Priorities and measures" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 33.3, "source": { "sourceId": "strategic-plan", "locator": "Priorities and measures" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2025", "value": 33.3, "source": { "sourceId": "strategic-plan", "locator": "Priorities and measures" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2023",
+          "value": 33.3,
+          "source": {
+            "sourceId": "strategic-plan",
+            "locator": "Priorities and measures"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 33.3,
+          "source": {
+            "sourceId": "strategic-plan",
+            "locator": "Priorities and measures"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2025",
+          "value": 33.3,
+          "source": {
+            "sourceId": "strategic-plan",
+            "locator": "Priorities and measures"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     }
@@ -90,28 +230,83 @@
   "tables": [
     {
       "id": "strategic-priorities",
-      "title": "Strategic plan priorities and their stated measures",
-      "description": "As written in the adopted strategic plan. Where no measure is stated, that is recorded as such rather than inferred, and the linked indicator column shows what this dashboard tracks in the absence of an official measure.",
+      "title": "Strategic Plan 2023-2027: pillars and stated measures",
+      "description": "The plan adopted in March 2023 for the current council term is built on three pillars — GROW, FOSTER and CHAMPION — resting on a stated foundation of human resources, information technology, financial stability and corporate values. The pillars are recorded here as written. Whether each carries a checkable measure is a separate question from whether the pillars are the right ones, and is answered by reading the plan.",
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "priority", "label": "Priority", "align": "left" },
-        { "key": "measure", "label": "Stated measure", "align": "left" },
-        { "key": "linked", "label": "Indicator tracked here", "align": "left" },
-        { "key": "status", "label": "Reported status", "align": "left" }
+        {
+          "key": "priority",
+          "label": "Pillar or foundation",
+          "align": "left"
+        },
+        {
+          "key": "kind",
+          "label": "Type",
+          "align": "left"
+        },
+        {
+          "key": "measure",
+          "label": "Stated measure",
+          "align": "left"
+        },
+        {
+          "key": "linked",
+          "label": "Indicator tracked here",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "priority": "Sustainable infrastructure renewal", "measure": "Renewal funding gap reduced", "linked": "Annual renewal funding gap", "status": "Reported annually in budget deliberations" },
-        { "priority": "Responsible financial management", "measure": "No stated measure", "linked": "Reserves per household; debt servicing share", "status": "Not separately reported" },
-        { "priority": "Economic development and growth", "measure": "No stated measure", "linked": "Building permits; approved but unbuilt units", "status": "Not separately reported" },
-        { "priority": "Community services and recreation", "measure": "No stated measure", "linked": "Library circulation; facility condition", "status": "Not separately reported" },
-        { "priority": "Organisational capacity and service delivery", "measure": "Annual employee engagement survey", "linked": "None; no public series available", "status": "Internal reporting only" },
-        { "priority": "Communication and engagement", "measure": "No stated measure", "linked": "Share of meetings including a closed session", "status": "Not separately reported" }
+        {
+          "priority": "GROW",
+          "kind": "Pillar",
+          "measure": "To be confirmed against the plan",
+          "linked": "Building permits; approved but unbuilt units; uncommitted wastewater capacity"
+        },
+        {
+          "priority": "FOSTER",
+          "kind": "Pillar",
+          "measure": "To be confirmed against the plan",
+          "linked": "Library circulation; facility condition; age structure"
+        },
+        {
+          "priority": "CHAMPION",
+          "kind": "Pillar",
+          "measure": "To be confirmed against the plan",
+          "linked": "Share of meetings including a closed session"
+        },
+        {
+          "priority": "Human resources",
+          "kind": "Foundation",
+          "measure": "To be confirmed against the plan",
+          "linked": "None; no public series available"
+        },
+        {
+          "priority": "Information technology",
+          "kind": "Foundation",
+          "measure": "To be confirmed against the plan",
+          "linked": "None; no public series available"
+        },
+        {
+          "priority": "Financial stability",
+          "kind": "Foundation",
+          "measure": "To be confirmed against the plan",
+          "linked": "Reserves per household; debt servicing share; renewal funding gap"
+        },
+        {
+          "priority": "Corporate values",
+          "kind": "Foundation",
+          "measure": "To be confirmed against the plan",
+          "linked": "None; no public series available"
+        }
       ],
-      "source": { "sourceId": "strategic-plan", "locator": "Priorities" },
+      "source": {
+        "sourceId": "strategic-plan",
+        "locator": "Pillars and foundation, Strategic Plan 2023-2027"
+      },
       "lastUpdated": "2026-08-01",
-      "provenance": "sample",
-      "note": "The linked indicator column is this dashboard's own choice of proxy where the plan states no measure. It is analysis, not council's position, and is labelled as such."
+      "provenance": "sourced",
+      "note": "The pillar and foundation names are taken from the plan. The measures column is deliberately left as unconfirmed rather than filled in: recording 'no stated measure' would be a claim about the document that has not been verified page by page, and this dashboard does not make claims it has not checked. The linked indicator column is this dashboard's own choice of proxy, which is analysis rather than council's position."
     },
     {
       "id": "decision-record",
@@ -119,28 +314,139 @@
       "description": "What was decided, when, by which body, on what vote where a recorded vote exists, and the report that informed it. This table is the spine that connects figures elsewhere in the dashboard to the choices that produced them.",
       "geography": "Township of North Glengarry",
       "columns": [
-        { "key": "date", "label": "Date", "align": "left" },
-        { "key": "body", "label": "Body", "align": "left" },
-        { "key": "decision", "label": "Decision", "align": "left" },
-        { "key": "report", "label": "Report", "align": "left" },
-        { "key": "vote", "label": "Vote", "align": "left" },
-        { "key": "connects", "label": "Connects to", "align": "left" }
+        {
+          "key": "date",
+          "label": "Date",
+          "align": "left"
+        },
+        {
+          "key": "body",
+          "label": "Body",
+          "align": "left"
+        },
+        {
+          "key": "decision",
+          "label": "Decision",
+          "align": "left"
+        },
+        {
+          "key": "report",
+          "label": "Report",
+          "align": "left"
+        },
+        {
+          "key": "vote",
+          "label": "Vote",
+          "align": "left"
+        },
+        {
+          "key": "connects",
+          "label": "Connects to",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "date": "2022-03", "body": "Township council", "decision": "Adopted the asset management plan required under O. Reg. 588/17", "report": "Report PW-2022-06", "vote": "Carried, no recorded vote", "connects": "Renewal funding gap" },
-        { "date": "2022-05", "body": "Township council", "decision": "Approved the water treatment plant upgrade and authorised a grant application", "report": "Report PW-2022-11", "vote": "Carried, no recorded vote", "connects": "Major capital projects; long-term debt" },
-        { "date": "2022-09", "body": "County council", "decision": "Approved the county roads capital programme including reconstruction through a township settlement area", "report": "County report TR-2022-14", "vote": "Carried", "connects": "Major capital projects, county-owned" },
-        { "date": "2022-12", "body": "Township council", "decision": "Approved the budget and tax rate by-law for the following year", "report": "Report FIN-2022-21", "vote": "Carried, 4 to 1 recorded", "connects": "Tax levy; capital contribution" },
-        { "date": "2023-02", "body": "Township council", "decision": "Adopted the strategic plan for the council term", "report": "Report CAO-2023-02", "vote": "Carried, no recorded vote", "connects": "Strategic priorities" },
-        { "date": "2023-06", "body": "Township council", "decision": "Authorised debenture financing for the water treatment plant upgrade", "report": "Report FIN-2023-09", "vote": "Carried, no recorded vote", "connects": "Long-term debt" },
-        { "date": "2023-10", "body": "Township council", "decision": "Received the fire master plan and directed staff to report on apparatus replacement", "report": "Report FD-2023-04", "vote": "Received", "connects": "Apparatus past service life" },
-        { "date": "2024-04", "body": "Township council", "decision": "Approved a zoning by-law amendment permitting an infill apartment development", "report": "Report PL-2024-03", "vote": "Carried, 3 to 2 recorded", "connects": "Approved but unbuilt units" },
-        { "date": "2024-07", "body": "Township council", "decision": "Deferred the arena roof and refrigeration project to the following budget year", "report": "Report REC-2024-05", "vote": "Carried, no recorded vote", "connects": "Facilities renewal gap" },
-        { "date": "2024-11", "body": "Township council", "decision": "Approved a pumper truck replacement funded from reserve", "report": "Report FD-2024-08", "vote": "Carried, no recorded vote", "connects": "Fire equipment reserve" },
-        { "date": "2025-03", "body": "Township council", "decision": "Received the wastewater capacity report and directed that allocation be tracked against approvals", "report": "Report PW-2025-04", "vote": "Received", "connects": "Uncommitted wastewater capacity" },
-        { "date": "2025-09", "body": "County council", "decision": "Approved the paramedic services response time standard for the following year", "report": "County report PS-2025-07", "vote": "Carried", "connects": "Paramedic services, county-delivered" }
+        {
+          "date": "2022-03",
+          "body": "Township council",
+          "decision": "Adopted the asset management plan required under O. Reg. 588/17",
+          "report": "Report PW-2022-06",
+          "vote": "Carried, no recorded vote",
+          "connects": "Renewal funding gap"
+        },
+        {
+          "date": "2022-05",
+          "body": "Township council",
+          "decision": "Approved the water treatment plant upgrade and authorised a grant application",
+          "report": "Report PW-2022-11",
+          "vote": "Carried, no recorded vote",
+          "connects": "Major capital projects; long-term debt"
+        },
+        {
+          "date": "2022-09",
+          "body": "County council",
+          "decision": "Approved the county roads capital programme including reconstruction through a township settlement area",
+          "report": "County report TR-2022-14",
+          "vote": "Carried",
+          "connects": "Major capital projects, county-owned"
+        },
+        {
+          "date": "2022-12",
+          "body": "Township council",
+          "decision": "Approved the budget and tax rate by-law for the following year",
+          "report": "Report FIN-2022-21",
+          "vote": "Carried, 4 to 1 recorded",
+          "connects": "Tax levy; capital contribution"
+        },
+        {
+          "date": "2023-02",
+          "body": "Township council",
+          "decision": "Adopted the strategic plan for the council term",
+          "report": "Report CAO-2023-02",
+          "vote": "Carried, no recorded vote",
+          "connects": "Strategic priorities"
+        },
+        {
+          "date": "2023-06",
+          "body": "Township council",
+          "decision": "Authorised debenture financing for the water treatment plant upgrade",
+          "report": "Report FIN-2023-09",
+          "vote": "Carried, no recorded vote",
+          "connects": "Long-term debt"
+        },
+        {
+          "date": "2023-10",
+          "body": "Township council",
+          "decision": "Received the fire master plan and directed staff to report on apparatus replacement",
+          "report": "Report FD-2023-04",
+          "vote": "Received",
+          "connects": "Apparatus past service life"
+        },
+        {
+          "date": "2024-04",
+          "body": "Township council",
+          "decision": "Approved a zoning by-law amendment permitting an infill apartment development",
+          "report": "Report PL-2024-03",
+          "vote": "Carried, 3 to 2 recorded",
+          "connects": "Approved but unbuilt units"
+        },
+        {
+          "date": "2024-07",
+          "body": "Township council",
+          "decision": "Deferred the arena roof and refrigeration project to the following budget year",
+          "report": "Report REC-2024-05",
+          "vote": "Carried, no recorded vote",
+          "connects": "Facilities renewal gap"
+        },
+        {
+          "date": "2024-11",
+          "body": "Township council",
+          "decision": "Approved a pumper truck replacement funded from reserve",
+          "report": "Report FD-2024-08",
+          "vote": "Carried, no recorded vote",
+          "connects": "Fire equipment reserve"
+        },
+        {
+          "date": "2025-03",
+          "body": "Township council",
+          "decision": "Received the wastewater capacity report and directed that allocation be tracked against approvals",
+          "report": "Report PW-2025-04",
+          "vote": "Received",
+          "connects": "Uncommitted wastewater capacity"
+        },
+        {
+          "date": "2025-09",
+          "body": "County council",
+          "decision": "Approved the paramedic services response time standard for the following year",
+          "report": "County report PS-2025-07",
+          "vote": "Carried",
+          "connects": "Paramedic services, county-delivered"
+        }
       ],
-      "source": { "sourceId": "council-agendas", "locator": "Agendas, minutes, and staff reports as dated" },
+      "source": {
+        "sourceId": "council-agendas",
+        "locator": "Agendas, minutes, and staff reports as dated"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Report numbers and dates are placeholders in the format the real record will take. Personal information from council packages is excluded: where a decision concerned a named applicant, the decision is recorded and the individual is not."
@@ -151,21 +457,80 @@
       "description": "Drawn from agendas, staff reports, and directions given to staff with a reporting date attached. This is the forward view: where the next commitments will be made and which figures elsewhere in the dashboard will move as a result.",
       "geography": "Township of North Glengarry",
       "columns": [
-        { "key": "expected", "label": "Expected", "align": "left" },
-        { "key": "body", "label": "Body", "align": "left" },
-        { "key": "item", "label": "Item", "align": "left" },
-        { "key": "origin", "label": "Origin", "align": "left" },
-        { "key": "affects", "label": "Affects", "align": "left" }
+        {
+          "key": "expected",
+          "label": "Expected",
+          "align": "left"
+        },
+        {
+          "key": "body",
+          "label": "Body",
+          "align": "left"
+        },
+        {
+          "key": "item",
+          "label": "Item",
+          "align": "left"
+        },
+        {
+          "key": "origin",
+          "label": "Origin",
+          "align": "left"
+        },
+        {
+          "key": "affects",
+          "label": "Affects",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "expected": "2026-09", "body": "Township council", "item": "Arena roof and refrigeration: award or defer", "origin": "Directed by council, 2024-07", "affects": "Facilities renewal gap; reserves" },
-        { "expected": "2026-10", "body": "Township council", "item": "Aerial apparatus: replace, retire, or seek shared service", "origin": "Fire master plan, 2023", "affects": "Fire equipment reserve; level of service" },
-        { "expected": "2026-11", "body": "Township council", "item": "Development charges: whether to undertake a background study", "origin": "Outstanding question, no council direction recorded", "affects": "Who funds growth-related infrastructure" },
-        { "expected": "2026-12", "body": "Township council", "item": "Budget and tax rate by-law for the following year", "origin": "Annual statutory cycle", "affects": "Tax levy; capital contribution; renewal gap" },
-        { "expected": "2027-01", "body": "County council", "item": "County levy apportionment for the following year", "origin": "Annual statutory cycle", "affects": "County portion of the tax bill" },
-        { "expected": "Timing unknown", "body": "Township council", "item": "Wastewater treatment capacity expansion: whether to begin study", "origin": "Wastewater capacity report, 2025-03", "affects": "Ceiling on serviced growth" }
+        {
+          "expected": "2026-09",
+          "body": "Township council",
+          "item": "Arena roof and refrigeration: award or defer",
+          "origin": "Directed by council, 2024-07",
+          "affects": "Facilities renewal gap; reserves"
+        },
+        {
+          "expected": "2026-10",
+          "body": "Township council",
+          "item": "Aerial apparatus: replace, retire, or seek shared service",
+          "origin": "Fire master plan, 2023",
+          "affects": "Fire equipment reserve; level of service"
+        },
+        {
+          "expected": "2026-11",
+          "body": "Township council",
+          "item": "Development charges: whether to undertake a background study",
+          "origin": "Outstanding question, no council direction recorded",
+          "affects": "Who funds growth-related infrastructure"
+        },
+        {
+          "expected": "2026-12",
+          "body": "Township council",
+          "item": "Budget and tax rate by-law for the following year",
+          "origin": "Annual statutory cycle",
+          "affects": "Tax levy; capital contribution; renewal gap"
+        },
+        {
+          "expected": "2027-01",
+          "body": "County council",
+          "item": "County levy apportionment for the following year",
+          "origin": "Annual statutory cycle",
+          "affects": "County portion of the tax bill"
+        },
+        {
+          "expected": "Timing unknown",
+          "body": "Township council",
+          "item": "Wastewater treatment capacity expansion: whether to begin study",
+          "origin": "Wastewater capacity report, 2025-03",
+          "affects": "Ceiling on serviced growth"
+        }
       ],
-      "source": { "sourceId": "council-agendas", "locator": "Agendas and outstanding staff directions" },
+      "source": {
+        "sourceId": "council-agendas",
+        "locator": "Agendas and outstanding staff directions"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Items with no council direction recorded are shown as open questions rather than as scheduled business, because nothing in the record commits council to considering them."
@@ -176,18 +541,61 @@
       "description": "What was finished, what it cost against its approved budget, and what outcome was stated when it was reported complete. The stated outcome is council's or staff's characterisation, quoted rather than assessed.",
       "geography": "Township of North Glengarry",
       "columns": [
-        { "key": "project", "label": "Project", "align": "left" },
-        { "key": "completed", "label": "Completed", "align": "left" },
-        { "key": "approved", "label": "Approved", "format": "currency", "align": "right" },
-        { "key": "final", "label": "Final cost", "format": "currency", "align": "right" },
-        { "key": "outcome", "label": "Stated outcome", "align": "left" }
+        {
+          "key": "project",
+          "label": "Project",
+          "align": "left"
+        },
+        {
+          "key": "completed",
+          "label": "Completed",
+          "align": "left"
+        },
+        {
+          "key": "approved",
+          "label": "Approved",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "final",
+          "label": "Final cost",
+          "format": "currency",
+          "align": "right"
+        },
+        {
+          "key": "outcome",
+          "label": "Stated outcome",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "project": "Bridge replacement, structure 14", "completed": "2025-11", "approved": 1650000, "final": 1650000, "outcome": "Reported complete within approved budget; load restriction removed" },
-        { "project": "Municipal office accessibility retrofit", "completed": "2024-08", "approved": 240000, "final": 268000, "outcome": "Reported complete; overage attributed to structural conditions found during construction" },
-        { "project": "Watermain replacement, phase 1", "completed": "2023-10", "approved": 1180000, "final": 1094000, "outcome": "Reported complete under budget; remaining funds returned to reserve" }
+        {
+          "project": "Bridge replacement, structure 14",
+          "completed": "2025-11",
+          "approved": 1650000,
+          "final": 1650000,
+          "outcome": "Reported complete within approved budget; load restriction removed"
+        },
+        {
+          "project": "Municipal office accessibility retrofit",
+          "completed": "2024-08",
+          "approved": 240000,
+          "final": 268000,
+          "outcome": "Reported complete; overage attributed to structural conditions found during construction"
+        },
+        {
+          "project": "Watermain replacement, phase 1",
+          "completed": "2023-10",
+          "approved": 1180000,
+          "final": 1094000,
+          "outcome": "Reported complete under budget; remaining funds returned to reserve"
+        }
       ],
-      "source": { "sourceId": "council-agendas", "locator": "Project completion reports" },
+      "source": {
+        "sourceId": "council-agendas",
+        "locator": "Project completion reports"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample"
     }

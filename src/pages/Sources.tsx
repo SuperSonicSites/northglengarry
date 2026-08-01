@@ -92,10 +92,13 @@ export function Sources() {
           </div>
         </div>
         <p className="caveat">
-          No URLs have been recorded yet. The source inventory audit named in the requirements is
-          the first task: confirm each document exists, capture a stable link or a stored copy, and
-          record the date it was retrieved. Until then every entry reads <em>Requested</em> or{' '}
-          <em>Not obtained</em>, which is the honest state.
+          {counts.linked + counts.stored} documents now carry a URL. Those URLs were located
+          through a public search index and have <strong>not been confirmed by retrieving them</strong>{' '}
+          — outbound fetching is blocked in the environment this build was assembled in, so no
+          link here has been opened and no document has been read. Every unconfirmed entry is
+          marked below. Confirming them, and recording the date each was retrieved, is the first
+          half of the source inventory audit; the second half is capturing a stored copy, because
+          municipal file URLs move whenever the site is reorganised.
         </p>
       </section>
 
@@ -150,7 +153,16 @@ function SourceEntry({ source, usedBy }: { source: Source; usedBy: string[] }) {
           <a href={source.url} target="_blank" rel="noreferrer noopener">
             {source.url}
           </a>
-          {source.retrieved ? <span className="source-meta"> · retrieved {source.retrieved}</span> : null}
+          {source.retrieved ? (
+            <span className="source-meta"> · retrieved {source.retrieved}</span>
+          ) : (
+            <span
+              className="unconfirmed"
+              title="This URL was located through a search index and has not been opened. Confirm it resolves to the document described, then record the retrieval date."
+            >
+              Not confirmed by retrieval
+            </span>
+          )}
         </p>
       ) : (
         <p className="source-url source-url-missing">

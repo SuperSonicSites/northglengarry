@@ -4,41 +4,81 @@
   "name": "Planning and development",
   "tagline": "What can be built, who decides, how long it takes, and what physically constrains growth.",
   "primer": [
-    "Planning in a two-tier county is a divided authority, and the division is the first thing to get right. In the United Counties of SDG the county is generally the approval authority for official plan amendments, plans of subdivision, and consents to sever land, while the township decides zoning by-law amendments, minor variances, and site plan control. A council member who promises a subdivision approval is promising something the township may not have the power to grant. The exact current split must be confirmed against the operative official plan and any delegation by-law, because delegation agreements between tiers do change.",
-    "The instruments themselves are layered. Provincial policy sits above everything and applications must be consistent with it. The official plan sets the long-run structure: where settlement areas are, what land is protected for agriculture, where growth is directed. The zoning by-law implements the official plan lot by lot and is what an applicant actually needs an amendment to. A zoning amendment that does not conform to the official plan cannot be approved without amending the official plan first, which is why some applications arrive as a pair.",
+    "Planning in a two-tier county is a divided authority, and the division is the first thing to get right. The operative official plan for North Glengarry is the county's: the SDG Counties Official Plan (2018), consolidated to February 2025, which came fully into effect for most of the counties after Ontario Land Tribunal decisions in February and June 2022. The township does not hold its own official plan. The county is generally the approval authority for official plan amendments, plans of subdivision, and consents to sever land, while the township decides zoning by-law amendments, minor variances, and site plan control. A council member who promises a subdivision approval is promising something the township does not have the power to grant. The precise current split must still be confirmed against any delegation by-law, because delegation agreements between tiers do change.",
+    "The instruments themselves are layered. Provincial policy sits above everything and applications must be consistent with it. The county official plan sets the long-run structure to 2036: where settlement areas are, what land is protected for agriculture, where growth is directed. The township's zoning by-law — By-law 39-2000, as amended — implements that plan lot by lot and is what an applicant actually needs an amendment to. A comprehensive by-law originally passed in 2000 is old enough that whether it reflects current provincial requirements, particularly on additional residential units, is a checkable and consequential question. A zoning amendment that does not conform to the official plan cannot be approved without amending the plan first, which is why some applications arrive as a pair.",
     "The Planning Act sets statutory timelines after which an applicant may appeal to the Ontario Land Tribunal on the basis that no decision was made. These timelines have been shortened by successive provincial reforms, so the applicable timeline depends on when the application was received. Processing time against the statutory clock is therefore both a service measure and a risk measure: a missed timeline transfers the decision from council to a tribunal.",
     "Approved but unbuilt units — the residential pipeline — is the most useful forward-looking figure in this domain and the least reported. Approvals accumulate; construction follows on the developer's schedule and financing, not the township's. A township can approve a decade of supply and see very little of it built, and the gap between approved and built is where servicing capacity, market conditions, and infrastructure timing all show up at once.",
     "What ultimately gates growth in a rural township is rarely policy. It is servicing. Water treatment capacity, wastewater treatment capacity, and the ability of the receiving watercourse to accept effluent set a hard ceiling on how many units can be added inside a settlement area, regardless of what the official plan permits. Development outside settlement areas depends on private wells and septic systems, which brings soil conditions and conservation authority regulation into the decision.",
     "Appeals are the record of where the township's decisions have been contested and what the tribunal concluded. An appeal history is not a verdict on planning quality — some applications are appealed by applicants and some by neighbours — but it is the clearest available evidence of where the local planning framework and provincial policy have come into conflict."
   ],
   "tierSplit": [
-    { "item": "Official plan and amendments", "owner": "county", "note": "Confirm whether the county official plan is the operative document for North Glengarry and whether the township holds a local plan." },
-    { "item": "Plans of subdivision and condominium", "owner": "county", "note": "County is generally the approval authority in SDG. Confirm against the current delegation by-law." },
-    { "item": "Consents to sever land", "owner": "county", "note": "Decided by the county land division committee unless delegated." },
-    { "item": "Zoning by-law amendments", "owner": "township", "note": "Township council decides. Appealable to the Ontario Land Tribunal." },
-    { "item": "Minor variances", "owner": "township", "note": "Decided by the township committee of adjustment." },
-    { "item": "Site plan control", "owner": "township", "note": "Often delegated to staff. Confirm the current delegation." },
-    { "item": "Building permits", "owner": "township" },
-    { "item": "Development within regulated areas", "owner": "other", "note": "Conservation authority permission is required independently of municipal approval and is not a municipal decision." },
-    { "item": "Provincial policy consistency", "owner": "province", "note": "All decisions must be consistent with provincial policy in force at the time of the decision." }
+    {
+      "item": "Official plan and amendments",
+      "owner": "county",
+      "note": "Confirmed: the operative document is the SDG Counties Official Plan (2018), consolidated to February 2025, which sets the growth vision to 2036. It came fully into effect for most of SDG following Ontario Land Tribunal decisions of 15 February 2022 and 21 June 2022. North Glengarry does not hold its own official plan — amendments are county decisions."
+    },
+    {
+      "item": "Plans of subdivision and condominium",
+      "owner": "county",
+      "note": "County is generally the approval authority in SDG. Confirm against the current delegation by-law."
+    },
+    {
+      "item": "Consents to sever land",
+      "owner": "county",
+      "note": "Decided by the county land division committee unless delegated."
+    },
+    {
+      "item": "Zoning by-law amendments",
+      "owner": "township",
+      "note": "Township council decides. Appealable to the Ontario Land Tribunal."
+    },
+    {
+      "item": "Minor variances",
+      "owner": "township",
+      "note": "Decided by the township committee of adjustment."
+    },
+    {
+      "item": "Site plan control",
+      "owner": "township",
+      "note": "Often delegated to staff. Confirm the current delegation."
+    },
+    {
+      "item": "Building permits",
+      "owner": "township"
+    },
+    {
+      "item": "Development within regulated areas",
+      "owner": "other",
+      "note": "Raisin Region Conservation Authority permission is required independently of municipal approval and is not a municipal decision. The RRCA's five member municipalities are North Glengarry, South Glengarry, North Stormont, South Stormont and the City of Cornwall. Authority boundaries follow watersheds, so confirm whether any part of the township falls under a different authority."
+    },
+    {
+      "item": "Provincial policy consistency",
+      "owner": "province",
+      "note": "All decisions must be consistent with provincial policy in force at the time of the decision."
+    }
   ],
   "gaps": [
     "Processing timelines are not published as a series anywhere. They must be constructed application by application from staff reports, recording date received and date decided.",
     "Approved-but-unbuilt unit counts require reconciling subdivision approvals held at the county against building permits issued by the township. Neither body maintains the reconciliation.",
     "Servicing capacity available for new connections is engineering judgement, not a published figure. It depends on peak flows and reserved allocations, and it should be requested from the operating authority with the assumptions stated.",
-    "Confirm whether the township has a development charges by-law. If it does not, growth-related infrastructure is funded from the general levy, which is a materially different position and changes how every development decision should be read."
+    "No development charges by-law has been located for the township; the fees and charges by-law appears to be the operative instrument for municipal charges. If there is genuinely no development charges by-law, growth-related infrastructure is funded from the general levy by all ratepayers rather than by the growth that requires it — a materially different position that changes how every development decision should be read. Confirm directly rather than inferring from absence of a posted document."
   ],
   "sourceIds": [
     "official-plan",
+    "official-plan-index",
     "zoning-bylaw",
+    "zoning-guide",
+    "building-planning-dept",
     "planning-reports",
+    "sdg-development-tracker",
     "olt-decisions",
     "development-charges",
     "conservation-authority",
     "water-wastewater-rate-study",
     "council-agendas",
     "county-council",
-    "building-permits"
+    "building-permits",
+    "fees-charges-bylaw"
   ],
   "lastUpdated": "2026-08-01",
   "indicators": [
@@ -54,11 +94,56 @@
       "headline": true,
       "definition": "Count of planning applications received in the year across all types: official plan amendment, zoning by-law amendment, plan of subdivision, consent, minor variance, and site plan. Types with very different effort and authority are combined here; the breakdown is in the detail table.",
       "series": [
-        { "period": "2020", "value": 47, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 63, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 58, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 44, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 41, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 47,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 63,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 58,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 44,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 41,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -74,15 +159,58 @@
       "definition": "Median calendar days from a complete application being received to council's decision, for zoning by-law amendments. Measured from the date the application was deemed complete, not the date first submitted; the gap between those two dates is not captured here and can be substantial.",
       "methodology": "Constructed by hand from staff reports. Median rather than mean because a single contested application distorts an average in a caseload this small.",
       "series": [
-        { "period": "2021", "value": 106, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2022", "value": 118, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 124, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 131, "source": { "sourceId": "planning-reports", "locator": "Application register" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2021",
+          "value": 106,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2022",
+          "value": 118,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 124,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 131,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Application register"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "target": {
         "value": 90,
         "label": "Statutory timeline for zoning by-law amendments in force at the time of these applications — confirm the applicable period for each year",
-        "source": { "sourceId": "planning-reports", "locator": "Planning Act, as amended" },
+        "source": {
+          "sourceId": "planning-reports",
+          "locator": "Planning Act, as amended"
+        },
         "provenance": "sample"
       },
       "lastUpdated": "2026-08-01"
@@ -99,11 +227,61 @@
       "headline": true,
       "definition": "Residential units with a valid planning approval in place that have not yet received a building permit. Measures approved supply, not committed construction. Draft approvals lapse if conditions are not cleared, so an aging pipeline is not the same as an available one.",
       "series": [
-        { "period": "2020", "value": 218, "source": { "sourceId": "planning-reports", "locator": "Subdivision status" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2021", "value": 241, "source": { "sourceId": "planning-reports", "locator": "Subdivision status" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2022", "value": 286, "source": { "sourceId": "planning-reports", "locator": "Subdivision status" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 312, "source": { "sourceId": "planning-reports", "locator": "Subdivision status" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 334, "source": { "sourceId": "planning-reports", "locator": "Subdivision status" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2020",
+          "value": 218,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Subdivision status"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2021",
+          "value": 241,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Subdivision status"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2022",
+          "value": 286,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Subdivision status"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 312,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Subdivision status"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 334,
+          "source": {
+            "sourceId": "planning-reports",
+            "locator": "Subdivision status"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -118,11 +296,56 @@
       "polarity": "neutral",
       "definition": "Count of appeals filed in the year concerning planning decisions affecting land in the township. A low count is not evidence of good decisions and a high count is not evidence of bad ones; the count records where decisions were contested.",
       "series": [
-        { "period": "2020", "value": 1, "source": { "sourceId": "olt-decisions", "locator": "Case search by municipality" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 0, "source": { "sourceId": "olt-decisions", "locator": "Case search by municipality" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 2, "source": { "sourceId": "olt-decisions", "locator": "Case search by municipality" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 1, "source": { "sourceId": "olt-decisions", "locator": "Case search by municipality" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 2, "source": { "sourceId": "olt-decisions", "locator": "Case search by municipality" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 1,
+          "source": {
+            "sourceId": "olt-decisions",
+            "locator": "Case search by municipality"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 0,
+          "source": {
+            "sourceId": "olt-decisions",
+            "locator": "Case search by municipality"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 2,
+          "source": {
+            "sourceId": "olt-decisions",
+            "locator": "Case search by municipality"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 1,
+          "source": {
+            "sourceId": "olt-decisions",
+            "locator": "Case search by municipality"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 2,
+          "source": {
+            "sourceId": "olt-decisions",
+            "locator": "Case search by municipality"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -138,10 +361,50 @@
       "definition": "Residential units that could be connected to the municipal wastewater system with capacity remaining after existing connections and allocations already committed to approved developments. This is the physical ceiling on growth inside serviced settlement areas and it binds before policy does.",
       "methodology": "Derived from rated plant capacity less average day flow less committed allocation, converted to units at a stated per-unit flow rate. The per-unit rate is an engineering assumption and must be recorded alongside the figure; changing it changes the answer materially.",
       "series": [
-        { "period": "2021", "value": 420, "source": { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2022", "value": 385, "source": { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2023", "value": 340, "source": { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true },
-        { "period": "2024", "value": 296, "source": { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" }, "recorded": "2026-08-01", "provenance": "sample", "estimated": true }
+        {
+          "period": "2021",
+          "value": 420,
+          "source": {
+            "sourceId": "water-wastewater-rate-study",
+            "locator": "Capacity analysis"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2022",
+          "value": 385,
+          "source": {
+            "sourceId": "water-wastewater-rate-study",
+            "locator": "Capacity analysis"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2023",
+          "value": 340,
+          "source": {
+            "sourceId": "water-wastewater-rate-study",
+            "locator": "Capacity analysis"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        },
+        {
+          "period": "2024",
+          "value": 296,
+          "source": {
+            "sourceId": "water-wastewater-rate-study",
+            "locator": "Capacity analysis"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true
+        }
       ],
       "lastUpdated": "2026-08-01"
     }
@@ -153,22 +416,94 @@
       "description": "Who decides is as important as how many. Applications decided by the county appear in township residents' experience as township decisions and are not.",
       "geography": "Township of North Glengarry",
       "columns": [
-        { "key": "type", "label": "Application type", "align": "left" },
-        { "key": "decider", "label": "Decided by", "align": "left" },
-        { "key": "y2022", "label": "2022", "format": "number", "align": "right" },
-        { "key": "y2023", "label": "2023", "format": "number", "align": "right" },
-        { "key": "y2024", "label": "2024", "format": "number", "align": "right" },
-        { "key": "statutory", "label": "Statutory timeline", "align": "left" }
+        {
+          "key": "type",
+          "label": "Application type",
+          "align": "left"
+        },
+        {
+          "key": "decider",
+          "label": "Decided by",
+          "align": "left"
+        },
+        {
+          "key": "y2022",
+          "label": "2022",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "y2023",
+          "label": "2023",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "y2024",
+          "label": "2024",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "statutory",
+          "label": "Statutory timeline",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "type": "Official plan amendment", "decider": "County", "y2022": 2, "y2023": 1, "y2024": 1, "statutory": "Confirm applicable period" },
-        { "type": "Zoning by-law amendment", "decider": "Township council", "y2022": 14, "y2023": 11, "y2024": 9, "statutory": "Confirm applicable period" },
-        { "type": "Plan of subdivision", "decider": "County", "y2022": 3, "y2023": 2, "y2024": 2, "statutory": "Confirm applicable period" },
-        { "type": "Consent to sever", "decider": "County land division", "y2022": 19, "y2023": 15, "y2024": 14, "statutory": "Confirm applicable period" },
-        { "type": "Minor variance", "decider": "Township committee of adjustment", "y2022": 13, "y2023": 10, "y2024": 11, "statutory": "Confirm applicable period" },
-        { "type": "Site plan control", "decider": "Township, often delegated to staff", "y2022": 7, "y2023": 5, "y2024": 4, "statutory": "Confirm applicable period" }
+        {
+          "type": "Official plan amendment",
+          "decider": "County",
+          "y2022": 2,
+          "y2023": 1,
+          "y2024": 1,
+          "statutory": "Confirm applicable period"
+        },
+        {
+          "type": "Zoning by-law amendment",
+          "decider": "Township council",
+          "y2022": 14,
+          "y2023": 11,
+          "y2024": 9,
+          "statutory": "Confirm applicable period"
+        },
+        {
+          "type": "Plan of subdivision",
+          "decider": "County",
+          "y2022": 3,
+          "y2023": 2,
+          "y2024": 2,
+          "statutory": "Confirm applicable period"
+        },
+        {
+          "type": "Consent to sever",
+          "decider": "County land division",
+          "y2022": 19,
+          "y2023": 15,
+          "y2024": 14,
+          "statutory": "Confirm applicable period"
+        },
+        {
+          "type": "Minor variance",
+          "decider": "Township committee of adjustment",
+          "y2022": 13,
+          "y2023": 10,
+          "y2024": 11,
+          "statutory": "Confirm applicable period"
+        },
+        {
+          "type": "Site plan control",
+          "decider": "Township, often delegated to staff",
+          "y2022": 7,
+          "y2023": 5,
+          "y2024": 4,
+          "statutory": "Confirm applicable period"
+        }
       ],
-      "source": { "sourceId": "planning-reports", "locator": "Application register" },
+      "source": {
+        "sourceId": "planning-reports",
+        "locator": "Application register"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Statutory timelines have been changed by successive provincial reforms and the applicable period depends on when each application was received. They are left to be confirmed per year rather than stated once and applied retroactively."
@@ -179,22 +514,92 @@
       "description": "Location, scale, status, and the body that holds the next decision. The next decision point column is the one to watch: it is where a project becomes a council agenda item.",
       "geography": "Township of North Glengarry",
       "columns": [
-        { "key": "project", "label": "Project", "align": "left" },
-        { "key": "area", "label": "Settlement area", "align": "left" },
-        { "key": "units", "label": "Units", "format": "number", "align": "right" },
-        { "key": "status", "label": "Status", "align": "left" },
-        { "key": "decider", "label": "Next decision by", "align": "left" },
-        { "key": "servicing", "label": "Servicing", "align": "left" }
+        {
+          "key": "project",
+          "label": "Project",
+          "align": "left"
+        },
+        {
+          "key": "area",
+          "label": "Settlement area",
+          "align": "left"
+        },
+        {
+          "key": "units",
+          "label": "Units",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "align": "left"
+        },
+        {
+          "key": "decider",
+          "label": "Next decision by",
+          "align": "left"
+        },
+        {
+          "key": "servicing",
+          "label": "Servicing",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "project": "Subdivision A", "area": "Alexandria", "units": 84, "status": "Draft approved, conditions outstanding", "decider": "County", "servicing": "Municipal water and wastewater" },
-        { "project": "Subdivision B", "area": "Alexandria", "units": 46, "status": "Registered, partially built", "decider": "Township, building permits", "servicing": "Municipal water and wastewater" },
-        { "project": "Subdivision C", "area": "Maxville", "units": 38, "status": "Application under review", "decider": "County", "servicing": "Municipal water and wastewater" },
-        { "project": "Infill apartment", "area": "Alexandria", "units": 24, "status": "Zoning amendment approved", "decider": "Township, site plan", "servicing": "Municipal water and wastewater" },
-        { "project": "Rural residential consents, aggregate", "area": "Rural", "units": 18, "status": "Various stages", "decider": "County land division", "servicing": "Private well and septic" },
-        { "project": "Commercial development", "area": "Alexandria", "units": 0, "status": "Site plan under review", "decider": "Township", "servicing": "Municipal water and wastewater" }
+        {
+          "project": "Subdivision A",
+          "area": "Alexandria",
+          "units": 84,
+          "status": "Draft approved, conditions outstanding",
+          "decider": "County",
+          "servicing": "Municipal water and wastewater"
+        },
+        {
+          "project": "Subdivision B",
+          "area": "Alexandria",
+          "units": 46,
+          "status": "Registered, partially built",
+          "decider": "Township, building permits",
+          "servicing": "Municipal water and wastewater"
+        },
+        {
+          "project": "Subdivision C",
+          "area": "Maxville",
+          "units": 38,
+          "status": "Application under review",
+          "decider": "County",
+          "servicing": "Municipal water and wastewater"
+        },
+        {
+          "project": "Infill apartment",
+          "area": "Alexandria",
+          "units": 24,
+          "status": "Zoning amendment approved",
+          "decider": "Township, site plan",
+          "servicing": "Municipal water and wastewater"
+        },
+        {
+          "project": "Rural residential consents, aggregate",
+          "area": "Rural",
+          "units": 18,
+          "status": "Various stages",
+          "decider": "County land division",
+          "servicing": "Private well and septic"
+        },
+        {
+          "project": "Commercial development",
+          "area": "Alexandria",
+          "units": 0,
+          "status": "Site plan under review",
+          "decider": "Township",
+          "servicing": "Municipal water and wastewater"
+        }
       ],
-      "source": { "sourceId": "planning-reports", "locator": "Active file status report" },
+      "source": {
+        "sourceId": "planning-reports",
+        "locator": "Active file status report"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Project names are generic placeholders. When replacing these with the real register, do not record applicant or landowner names — the dashboard excludes personal information from planning files by policy."
@@ -206,18 +611,63 @@
       "geography": "Serviced settlement areas, Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "area", "label": "Settlement area", "align": "left" },
-        { "key": "waterUnits", "label": "Water headroom (units)", "format": "number", "align": "right" },
-        { "key": "sewerUnits", "label": "Wastewater headroom (units)", "format": "number", "align": "right" },
-        { "key": "committed", "label": "Allocated to approvals", "format": "number", "align": "right" },
-        { "key": "uncommitted", "label": "Uncommitted", "format": "number", "align": "right" },
-        { "key": "constraint", "label": "Binding constraint", "align": "left" }
+        {
+          "key": "area",
+          "label": "Settlement area",
+          "align": "left"
+        },
+        {
+          "key": "waterUnits",
+          "label": "Water headroom (units)",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "sewerUnits",
+          "label": "Wastewater headroom (units)",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "committed",
+          "label": "Allocated to approvals",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "uncommitted",
+          "label": "Uncommitted",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "constraint",
+          "label": "Binding constraint",
+          "align": "left"
+        }
       ],
       "rows": [
-        { "area": "Alexandria", "waterUnits": 610, "sewerUnits": 430, "committed": 198, "uncommitted": 232, "constraint": "Wastewater treatment capacity" },
-        { "area": "Maxville", "waterUnits": 190, "sewerUnits": 118, "committed": 54, "uncommitted": 64, "constraint": "Wastewater treatment capacity" }
+        {
+          "area": "Alexandria",
+          "waterUnits": 610,
+          "sewerUnits": 430,
+          "committed": 198,
+          "uncommitted": 232,
+          "constraint": "Wastewater treatment capacity"
+        },
+        {
+          "area": "Maxville",
+          "waterUnits": 190,
+          "sewerUnits": 118,
+          "committed": 54,
+          "uncommitted": 64,
+          "constraint": "Wastewater treatment capacity"
+        }
       ],
-      "source": { "sourceId": "water-wastewater-rate-study", "locator": "Capacity analysis" },
+      "source": {
+        "sourceId": "water-wastewater-rate-study",
+        "locator": "Capacity analysis"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Headroom figures depend on an assumed flow per unit and on how much capacity is held in reserve for wet weather. Both assumptions should be requested from the operating authority in writing and recorded here, because they change the answer more than any policy decision does."

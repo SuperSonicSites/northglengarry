@@ -12,6 +12,7 @@ export function DataIntegrity() {
   const totals = integrityTotals()
   const inventory = sampleInventory()
   const outstanding = sources.filter((s) => s.status === 'requested' || s.status === 'unavailable')
+  const unconfirmed = sources.filter((s) => s.url && !s.retrieved)
 
   const stalePanels: { domain: string; label: string; date: string; days: number }[] = []
   for (const domain of domains) {
@@ -70,6 +71,10 @@ export function DataIntegrity() {
           <div>
             <span className="summary-num">{pct}%</span>
             <span className="summary-lab">of data points transcribed from a source</span>
+          </div>
+          <div>
+            <span className="summary-num">{unconfirmed.length}</span>
+            <span className="summary-lab">URLs recorded but not confirmed</span>
           </div>
           <div>
             <span className="summary-num">{outstanding.length}</span>
@@ -141,6 +146,29 @@ export function DataIntegrity() {
               </table>
             </div>
           ))
+        )}
+      </section>
+
+      <section className="block">
+        <h2>URLs recorded but not confirmed</h2>
+        <p className="definition">
+          These documents carry a URL located through a public search index. None has been opened:
+          outbound fetching was blocked in the environment this build was assembled in. A URL that
+          has not been retrieved is a lead, not a citation. Confirm each resolves to the document
+          described, capture a stored copy, and set <code>retrieved</code> to that date.
+        </p>
+        {unconfirmed.length === 0 ? (
+          <p className="empty">None. Every recorded URL has a retrieval date.</p>
+        ) : (
+          <ul className="source-list">
+            {unconfirmed.map((s) => (
+              <li key={s.id}>
+                <Link to={`/sources#${s.id}`}>{s.title}</Link>
+                <span className="source-meta">{s.publisher}</span>
+                <span className="unconfirmed">Not confirmed</span>
+              </li>
+            ))}
+          </ul>
         )}
       </section>
 

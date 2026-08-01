@@ -22,7 +22,10 @@ export function IndicatorCard({ indicator }: { indicator: Indicator }) {
           <h3>{indicator.name}</h3>
           <div className="badge-row">
             <TierBadge tier={indicator.tier} note={indicator.tierNote} />
-            {latest ? <ProvenanceBadge provenance={latest.provenance} /> : null}
+            {/* Any placeholder anywhere in the window taints the whole series,
+                not just the latest point — a chart drawn partly from real
+                figures and partly from invented ones is still not a trend. */}
+            <ProvenanceBadge provenance={trend.anySample ? 'sample' : 'sourced'} />
             {trend.anyEstimated ? <FlagBadge kind="estimated" /> : null}
             {trend.anyPartial ? <FlagBadge kind="partial" /> : null}
           </div>
@@ -88,7 +91,7 @@ export function IndicatorTile({
       </div>
       <div className="tile-foot">
         <TierBadge tier={indicator.tier} note={indicator.tierNote} />
-        {latest ? <ProvenanceBadge provenance={latest.provenance} /> : null}
+        <ProvenanceBadge provenance={trend.anySample ? 'sample' : 'sourced'} />
         {trend.anyEstimated ? <FlagBadge kind="estimated" /> : null}
       </div>
       <div className="tile-period">{latest ? `As at ${latest.period}` : 'No value'}</div>

@@ -23,12 +23,14 @@ export function compact(value: number, format: ValueFormat): string {
   if (format === 'currency' || format === 'currency2') {
     if (abs >= 1_000_000_000) return `$${(value / 1_000_000_000).toFixed(1)}B`
     if (abs >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}M`
-    if (abs >= 10_000) return `$${Math.round(value / 1000)}k`
+    // One decimal rather than a rounded thousand: a series that moves inside a
+    // narrow band would otherwise print the same axis label two or three times.
+    if (abs >= 10_000) return `$${(value / 1000).toFixed(1)}k`
     return CAD0.format(value)
   }
   if (format === 'percent') return `${NUM1.format(value)}%`
   if (abs >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`
-  if (abs >= 10_000) return `${Math.round(value / 1000)}k`
+  if (abs >= 10_000) return `${(value / 1000).toFixed(1)}k`
   return NUM.format(value)
 }
 

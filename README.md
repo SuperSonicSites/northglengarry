@@ -28,10 +28,33 @@ Current state, reported by `npm run validate`:
 
 | | |
 |---|---|
-| Data points | 200, all placeholders |
-| Detail tables | 23, all placeholders |
-| Source documents identified | 40 |
-| Source documents linked or stored | 0 — the inventory audit is outstanding |
+| Data points | 201 — 5 transcribed from real sources, 196 placeholders |
+| Detail tables | 23 — 2 built from real sources, 21 placeholders |
+| Source documents identified | 69 |
+| Source documents with a URL recorded | 56 — **none confirmed by retrieval**, see below |
+
+### About those URLs
+
+A research pass located real, specific documents for most of the source library:
+the township's 2022 Asset Management Plan, its Strategic Plan 2023-2027, budgets
+back to 2022, audited statements for 2021-2023, Zoning By-law 39-2000, the
+drinking water and wastewater annual reports, the SDG Counties Official Plan
+(2018, consolidated February 2025), the county budget and transportation
+services, the Statistics Canada census profiles at census subdivision 3501050,
+the ministry's Financial Information Return portal, and more.
+
+**Those URLs were found through a public search index and have not been opened.**
+Outbound fetching was blocked by the egress policy of the environment this build
+was assembled in — every host, including Wikipedia, returned 403 on direct
+retrieval. So no link in the library has been followed and no document has been
+read end to end.
+
+That distinction is carried in the data rather than glossed: a source with a
+`url` and no `retrieved` date renders a **Not confirmed by retrieval** marker in
+the source library, is counted on the Data Integrity page, and raises a warning
+from `npm run validate`. An unretrieved URL is a lead, not a citation. Opening
+each one, confirming it resolves to the document described, capturing a stored
+copy, and setting `retrieved` is the first half of the source inventory audit.
 
 Everything that is *not* a figure — the domain primers, the two-tier ownership splits, the
 methodology and geography notes, the stewardship questions, the source library entries and what
@@ -202,13 +225,42 @@ curriculum schedules a verification day at the end of each phase for exactly tha
   for the sponsor. Showing a comparison against municipalities nobody has agreed are fair would be
   worse than showing none, so the source library records the candidate criteria and the interface
   shows nothing until the set is chosen.
-- **No URLs in the source library.** Every document is recorded as `requested` or `not obtained`
-  with a note on what it contains and why it matters. Guessing at deep links to documents nobody
-  has confirmed exist would put unverified information into the one artefact the requirements say
-  must outlive everything else. The audit is day one of the work.
+- **No *confirmed* source URLs**, for the environmental reason set out above. What is recorded is
+  what a public search index reports, marked unconfirmed everywhere it appears rather than
+  presented as a citation. Nothing is inferred about a document's contents from the fact that its
+  URL exists.
 - **No polling, voter, canvassing, or opponent data**, per the non-goals.
 - **No personal information from council packages.** Where a decision concerned a named applicant,
   the decision is recorded and the individual is not.
+
+## What the research pass corrected
+
+Searching for the real documents did not just add links. It corrected things the first build had
+assumed, which is the argument for doing it before transcription rather than after:
+
+- **The library is a county service.** Library provision in North Glengarry comes from the
+  Stormont, Dundas and Glengarry County Library, established 1971 from the merger of seven rural
+  libraries — not a township library board. The indicator was carrying the wrong tier, the wrong
+  geography, and an implied township accountability that does not exist.
+- **There is no township official plan.** The operative plan is the SDG Counties Official Plan
+  (2018, consolidated February 2025), which came fully into effect after Ontario Land Tribunal
+  decisions in February and June 2022. Zoning stays township — By-law 39-2000, as amended.
+- **There are two drinking water systems, not two water "systems" per settlement.** One Alexandria
+  system draws surface water from the Mill Pond and supplies both Alexandria and Maxville through
+  separate distribution networks; Glen Robertson is a separate groundwater system. Real inventory
+  figures replaced the placeholders. Glen Robertson has a standing sodium exceedance.
+- **The fire service has three stations**, not two: Alexandria, Apple Hill, and Maxville, staffed
+  by "over fifty" volunteers across 643 square kilometres.
+- **Debt is reported on two different bases.** The 2025 budget states a start-of-year position
+  split into rate-funded and tax-supported ($9.57M total, $6.06M rate-funded); the Financial
+  Information Return reports year-end principal. Recorded as a domain gap so the two are never
+  silently merged into one series.
+- **The strategic plan has named pillars** — GROW, FOSTER, CHAMPION, on a stated foundation of
+  human resources, information technology, financial stability, and corporate values. The pillar
+  names are now recorded as sourced; whether each carries a measure is left explicitly unconfirmed
+  rather than asserted, because that requires reading the plan page by page.
+- **The 2021 population is contested.** Two figures circulate, 10,144 and 10,119. The dashboard
+  records 10,144 and states the discrepancy in a note rather than reconciling it silently.
 
 ## Open questions carried from the requirements
 

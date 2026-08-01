@@ -12,28 +12,59 @@
     "The service statistics at the end of this domain — library, recreation, facility usage — are the township's own numbers and are the least standardised data in the dashboard. They are worth carrying anyway: they are the only place where residents' actual use of what the township provides is recorded at all, and the Ontario Public Library Statistics submission gives at least the library a comparable multi-year basis."
   ],
   "tierSplit": [
-    { "item": "Building permits and enforcement", "owner": "township", "note": "Township issues permits and employs the Chief Building Official." },
-    { "item": "Recreation facilities and programming", "owner": "township" },
-    { "item": "Public library", "owner": "township", "note": "Governed by an appointed board under the Public Libraries Act; funded largely by the township." },
-    { "item": "Social housing and homelessness services", "owner": "county", "note": "SDG is the consolidated municipal service manager. Waitlists are reported county-wide." },
-    { "item": "Child care and early years", "owner": "county", "note": "County is the service system manager." },
-    { "item": "Long-term care", "owner": "county" },
-    { "item": "Economic development", "owner": "shared", "note": "Both tiers run programmes. Confirm the current division and any joint funding agreement." }
+    {
+      "item": "Building permits and enforcement",
+      "owner": "township",
+      "note": "Township issues permits and employs the Chief Building Official."
+    },
+    {
+      "item": "Recreation facilities and programming",
+      "owner": "township"
+    },
+    {
+      "item": "Public library",
+      "owner": "county",
+      "note": "Delivered by the SDG County Library, established 1971 from the merger of seven rural libraries. Not a township library board — a common and consequential misattribution."
+    },
+    {
+      "item": "Social housing and homelessness services",
+      "owner": "county",
+      "note": "SDG is the consolidated municipal service manager. Waitlists are reported county-wide."
+    },
+    {
+      "item": "Child care and early years",
+      "owner": "county",
+      "note": "County is the service system manager."
+    },
+    {
+      "item": "Long-term care",
+      "owner": "county"
+    },
+    {
+      "item": "Economic development",
+      "owner": "shared",
+      "note": "Both tiers run programmes. Confirm the current division and any joint funding agreement."
+    }
   ],
   "gaps": [
     "Business openings and closures have no authoritative municipal source. Business licence data covers only licensed categories, which in a rural township is a small share of businesses. Any count here is partial by construction and must be labelled so.",
     "Employment and labour force figures are not reliably available at the township level. The smallest geography with acceptable error is larger than the township and must be named wherever such a figure appears.",
     "Tourism has no municipal measurement instrument. Accommodation counts and event attendance may be obtainable but are not a series.",
-    "Recreation registration and facility usage are reported inconsistently between years and may require manual entry from budget presentations."
+    "Recreation registration and facility usage are reported inconsistently between years and may require manual entry from budget presentations.",
+    "Library statistics are reported for the county system as a whole. Branch-level circulation, membership, and programming for the North Glengarry branches are not published and must be requested from the county library."
   ],
   "sourceIds": [
     "census-2021",
+    "census-2021-fogs",
     "census-2016",
+    "census-2011",
     "census-agriculture",
     "building-permits",
-    "library-report",
+    "library-stats",
+    "sdg-library",
     "recreation-reports",
     "sdg-social-services",
+    "sdg-statistics",
     "mpac-roll"
   ],
   "lastUpdated": "2026-08-01",
@@ -48,14 +79,54 @@
       "tierNote": "Counted by Statistics Canada. The township does not produce its own count.",
       "polarity": "neutral",
       "headline": true,
-      "definition": "Total population on census day. Census counts are subject to undercoverage, which Statistics Canada estimates separately; the count shown is the published count, not the adjusted estimate.",
+      "definition": "Total population on census day at the census subdivision, whose boundary matches the municipal boundary. Census counts are subject to undercoverage, which Statistics Canada estimates separately; the count shown is the published count, not the adjusted estimate.",
       "series": [
-        { "period": "2006", "value": 10723, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2011", "value": 10251, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2016", "value": 10109, "source": { "sourceId": "census-2016", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 10310, "source": { "sourceId": "census-2021", "locator": "Census profile, population" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2006",
+          "value": 10631,
+          "source": {
+            "sourceId": "census-2011",
+            "locator": "Focus on Geography, population change 2006 to 2011"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "estimated": true,
+          "note": "Back-calculated from the stated -3.6 percent change between 2006 and 2011, not read from a 2006 profile. Replace with the figure read directly."
+        },
+        {
+          "period": "2011",
+          "value": 10251,
+          "source": {
+            "sourceId": "census-2011",
+            "locator": "Focus on Geography Series, population"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sourced"
+        },
+        {
+          "period": "2016",
+          "value": 10109,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, population"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sourced"
+        },
+        {
+          "period": "2021",
+          "value": 10144,
+          "source": {
+            "sourceId": "census-2021",
+            "locator": "Census profile, population"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sourced",
+          "note": "Two figures circulate for 2021: 10,144 and 10,119. This dashboard records 10,144 and does not reconcile the difference silently. Confirm against the Statistics Canada profile table directly and record which is the published count."
+        }
       ],
-      "lastUpdated": "2026-08-01"
+      "lastUpdated": "2026-08-01",
+      "methodology": "Census subdivision 3501050, geographic identifier 2021A00053501050. The township covers 643.4 square kilometres, giving a population density of about 15.8 people per square kilometre in 2021 — the figure that explains why service delivery here costs what it does per resident."
     },
     {
       "id": "median-age",
@@ -68,10 +139,46 @@
       "headline": true,
       "definition": "Age at which half the population is older and half younger. A single figure summarising age structure; the full distribution is in the detail table and is more useful for service planning.",
       "series": [
-        { "period": "2006", "value": 42.6, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2011", "value": 45.1, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2016", "value": 47.8, "source": { "sourceId": "census-2016", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 49.2, "source": { "sourceId": "census-2021", "locator": "Census profile, age characteristics" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2006",
+          "value": 42.6,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, age characteristics"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2011",
+          "value": 45.1,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, age characteristics"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2016",
+          "value": 47.8,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, age characteristics"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 49.2,
+          "source": {
+            "sourceId": "census-2021",
+            "locator": "Census profile, age characteristics"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -85,10 +192,46 @@
       "polarity": "neutral",
       "definition": "Population aged under 15 plus population aged 65 and over, per 100 people aged 15 to 64. A demographic measure of the ratio between ages typically outside the labour force and ages typically within it. It describes age structure only and says nothing about employment, income, or need.",
       "series": [
-        { "period": "2006", "value": 48.9, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2011", "value": 52.4, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2016", "value": 57.1, "source": { "sourceId": "census-2016", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 62.3, "source": { "sourceId": "census-2021", "locator": "Derived from age distribution" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2006",
+          "value": 48.9,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Derived from age distribution"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2011",
+          "value": 52.4,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Derived from age distribution"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2016",
+          "value": 57.1,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Derived from age distribution"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 62.3,
+          "source": {
+            "sourceId": "census-2021",
+            "locator": "Derived from age distribution"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -102,9 +245,37 @@
       "polarity": "neutral",
       "definition": "Count of private dwellings occupied by usual residents on census day. Used as the denominator for the per-household figures in the financial domain.",
       "series": [
-        { "period": "2011", "value": 4285, "source": { "sourceId": "census-2016", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2016", "value": 4402, "source": { "sourceId": "census-2016", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 4487, "source": { "sourceId": "census-2021", "locator": "Census profile, dwellings" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2011",
+          "value": 4285,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, dwellings"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2016",
+          "value": 4402,
+          "source": {
+            "sourceId": "census-2016",
+            "locator": "Census profile, dwellings"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 4422,
+          "source": {
+            "sourceId": "census-2021",
+            "locator": "Census profile, occupied private dwellings"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sourced",
+          "note": "4,422 of 4,714 total private dwellings were occupied by usual residents. The 292 unoccupied dwellings are seasonal, vacant, or occupied only by foreign or temporary residents."
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -119,11 +290,56 @@
       "headline": true,
       "definition": "Count of residential building permits issued during the calendar year, all residential types including additions and renovations where a permit is required. A permit issued is not a dwelling completed.",
       "series": [
-        { "period": "2020", "value": 128, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 161, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 147, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 112, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 104, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 128,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 161,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 147,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 112,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 104,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -137,11 +353,56 @@
       "polarity": "neutral",
       "definition": "Total construction value declared on permit applications during the year. Declared for fee-setting purposes by the applicant. It is not a market value, not an assessed value, and not audited.",
       "series": [
-        { "period": "2020", "value": 21400000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 32800000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2022", "value": 29600000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 24100000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 22700000, "source": { "sourceId": "building-permits", "locator": "Annual permit summary" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 21400000,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 32800000,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2022",
+          "value": 29600000,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 24100000,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 22700000,
+          "source": {
+            "sourceId": "building-permits",
+            "locator": "Annual permit summary"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
@@ -156,29 +417,106 @@
       "headline": true,
       "definition": "Number of agricultural operations reporting in the Census of Agriculture. Read alongside total farm area: a falling count with rising average area is consolidation, which has different implications than a falling count with falling area.",
       "series": [
-        { "period": "2011", "value": 412, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2016", "value": 381, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2021", "value": 344, "source": { "sourceId": "census-agriculture", "locator": "Farm counts by census consolidated subdivision" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2011",
+          "value": 412,
+          "source": {
+            "sourceId": "census-agriculture",
+            "locator": "Farm counts by census consolidated subdivision"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2016",
+          "value": 381,
+          "source": {
+            "sourceId": "census-agriculture",
+            "locator": "Farm counts by census consolidated subdivision"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2021",
+          "value": 344,
+          "source": {
+            "sourceId": "census-agriculture",
+            "locator": "Farm counts by census consolidated subdivision"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
       "lastUpdated": "2026-08-01"
     },
     {
       "id": "library-circulation",
-      "name": "Library circulation",
+      "name": "Library circulation, county system",
       "unit": "items",
       "format": "number",
-      "geography": "North Glengarry Public Library service area",
-      "tier": "township",
+      "geography": "Stormont, Dundas and Glengarry County Library service area — not the township alone",
+      "tier": "county",
       "polarity": "neutral",
-      "definition": "Total items circulated during the year, physical and electronic combined. The 2020 and 2021 figures reflect a period of restricted in-person service and are not comparable to adjacent years without that context.",
+      "definition": "Total items circulated during the year across the county library system, physical and electronic combined. The county system was established in 1971 from the merger of seven existing rural libraries. Because the reporting unit is the county system, this figure must not be attributed to North Glengarry. The 2020 and 2021 values reflect a period of restricted in-person service.",
       "series": [
-        { "period": "2020", "value": 38200, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample", "partial": true, "note": "Reduced in-person service during the year." },
-        { "period": "2021", "value": 41600, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample", "partial": true, "note": "Reduced in-person service during part of the year." },
-        { "period": "2022", "value": 52300, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2023", "value": 55900, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" },
-        { "period": "2024", "value": 57400, "source": { "sourceId": "library-report", "locator": "Ontario Public Library Statistics submission" }, "recorded": "2026-08-01", "provenance": "sample" }
+        {
+          "period": "2020",
+          "value": 38200,
+          "source": {
+            "sourceId": "library-stats",
+            "locator": "Ontario public library statistics, annual submission"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "partial": true,
+          "note": "Reduced in-person service during the year."
+        },
+        {
+          "period": "2021",
+          "value": 41600,
+          "source": {
+            "sourceId": "library-stats",
+            "locator": "Ontario public library statistics, annual submission"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample",
+          "partial": true,
+          "note": "Reduced in-person service during part of the year."
+        },
+        {
+          "period": "2022",
+          "value": 52300,
+          "source": {
+            "sourceId": "library-stats",
+            "locator": "Ontario public library statistics, annual submission"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2023",
+          "value": 55900,
+          "source": {
+            "sourceId": "library-stats",
+            "locator": "Ontario public library statistics, annual submission"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        },
+        {
+          "period": "2024",
+          "value": 57400,
+          "source": {
+            "sourceId": "library-stats",
+            "locator": "Ontario public library statistics, annual submission"
+          },
+          "recorded": "2026-08-01",
+          "provenance": "sample"
+        }
       ],
-      "lastUpdated": "2026-08-01"
+      "lastUpdated": "2026-08-01",
+      "tierNote": "Library service in North Glengarry is delivered by the Stormont, Dundas and Glengarry County Library, not by a township library board. These are county figures covering all member municipalities; branch-level statistics for the North Glengarry branches must be requested."
     }
   ],
   "tables": [
@@ -189,20 +527,72 @@
       "geography": "North Glengarry, Township (census subdivision)",
       "tier": "federal",
       "columns": [
-        { "key": "group", "label": "Age group", "align": "left" },
-        { "key": "c2011", "label": "2011 %", "format": "percent", "align": "right" },
-        { "key": "c2016", "label": "2016 %", "format": "percent", "align": "right" },
-        { "key": "c2021", "label": "2021 %", "format": "percent", "align": "right" }
+        {
+          "key": "group",
+          "label": "Age group",
+          "align": "left"
+        },
+        {
+          "key": "c2011",
+          "label": "2011 %",
+          "format": "percent",
+          "align": "right"
+        },
+        {
+          "key": "c2016",
+          "label": "2016 %",
+          "format": "percent",
+          "align": "right"
+        },
+        {
+          "key": "c2021",
+          "label": "2021 %",
+          "format": "percent",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "group": "0 to 14", "c2011": 15.8, "c2016": 14.9, "c2021": 14.3 },
-        { "group": "15 to 24", "c2011": 11.2, "c2016": 10.4, "c2021": 9.8 },
-        { "group": "25 to 44", "c2011": 21.6, "c2016": 20.3, "c2021": 20.1 },
-        { "group": "45 to 64", "c2011": 32.8, "c2016": 31.7, "c2021": 29.2 },
-        { "group": "65 to 84", "c2011": 16.1, "c2016": 19.4, "c2021": 22.6 },
-        { "group": "85 and over", "c2011": 2.5, "c2016": 3.3, "c2021": 4.0 }
+        {
+          "group": "0 to 14",
+          "c2011": 15.8,
+          "c2016": 14.9,
+          "c2021": 14.3
+        },
+        {
+          "group": "15 to 24",
+          "c2011": 11.2,
+          "c2016": 10.4,
+          "c2021": 9.8
+        },
+        {
+          "group": "25 to 44",
+          "c2011": 21.6,
+          "c2016": 20.3,
+          "c2021": 20.1
+        },
+        {
+          "group": "45 to 64",
+          "c2011": 32.8,
+          "c2016": 31.7,
+          "c2021": 29.2
+        },
+        {
+          "group": "65 to 84",
+          "c2011": 16.1,
+          "c2016": 19.4,
+          "c2021": 22.6
+        },
+        {
+          "group": "85 and over",
+          "c2011": 2.5,
+          "c2016": 3.3,
+          "c2021": 4.0
+        }
       ],
-      "source": { "sourceId": "census-2021", "locator": "Census profile, age characteristics" },
+      "source": {
+        "sourceId": "census-2021",
+        "locator": "Census profile, age characteristics"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample"
     },
@@ -213,19 +603,60 @@
       "geography": "North Glengarry, Township (census subdivision)",
       "tier": "federal",
       "columns": [
-        { "key": "category", "label": "Category", "align": "left" },
-        { "key": "count", "label": "Households", "format": "number", "align": "right" },
-        { "key": "share", "label": "Share", "format": "percent", "align": "right" }
+        {
+          "key": "category",
+          "label": "Category",
+          "align": "left"
+        },
+        {
+          "key": "count",
+          "label": "Households",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "share",
+          "label": "Share",
+          "format": "percent",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "category": "Owner households", "count": 3510, "share": 78.2 },
-        { "category": "Renter households", "count": 977, "share": 21.8 },
-        { "category": "Single-detached house", "count": 3690, "share": 82.2 },
-        { "category": "Semi-detached and row", "count": 268, "share": 6.0 },
-        { "category": "Apartment, fewer than five storeys", "count": 462, "share": 10.3 },
-        { "category": "Movable dwelling and other", "count": 67, "share": 1.5 }
+        {
+          "category": "Owner households",
+          "count": 3510,
+          "share": 78.2
+        },
+        {
+          "category": "Renter households",
+          "count": 977,
+          "share": 21.8
+        },
+        {
+          "category": "Single-detached house",
+          "count": 3690,
+          "share": 82.2
+        },
+        {
+          "category": "Semi-detached and row",
+          "count": 268,
+          "share": 6.0
+        },
+        {
+          "category": "Apartment, fewer than five storeys",
+          "count": 462,
+          "share": 10.3
+        },
+        {
+          "category": "Movable dwelling and other",
+          "count": 67,
+          "share": 1.5
+        }
       ],
-      "source": { "sourceId": "census-2021", "locator": "Census profile, dwelling characteristics" },
+      "source": {
+        "sourceId": "census-2021",
+        "locator": "Census profile, dwelling characteristics"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Tenure rows and dwelling-type rows are two separate breakdowns of the same household total and should not be added together."
@@ -237,20 +668,72 @@
       "geography": "North Glengarry — census consolidated subdivision. Confirm boundary alignment with the municipality.",
       "tier": "federal",
       "columns": [
-        { "key": "metric", "label": "Measure", "align": "left" },
-        { "key": "c2011", "label": "2011", "format": "number", "align": "right" },
-        { "key": "c2016", "label": "2016", "format": "number", "align": "right" },
-        { "key": "c2021", "label": "2021", "format": "number", "align": "right" }
+        {
+          "key": "metric",
+          "label": "Measure",
+          "align": "left"
+        },
+        {
+          "key": "c2011",
+          "label": "2011",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "c2016",
+          "label": "2016",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "c2021",
+          "label": "2021",
+          "format": "number",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "metric": "Total farms", "c2011": 412, "c2016": 381, "c2021": 344 },
-        { "metric": "Total farm area (acres)", "c2011": 118400, "c2016": 116900, "c2021": 114200 },
-        { "metric": "Average farm area (acres)", "c2011": 287, "c2016": 307, "c2021": 332 },
-        { "metric": "Dairy operations", "c2011": 121, "c2016": 104, "c2021": 88 },
-        { "metric": "Oilseed and grain operations", "c2011": 148, "c2016": 156, "c2021": 161 },
-        { "metric": "Operators aged 55 and over", "c2011": 268, "c2016": 289, "c2021": 301 }
+        {
+          "metric": "Total farms",
+          "c2011": 412,
+          "c2016": 381,
+          "c2021": 344
+        },
+        {
+          "metric": "Total farm area (acres)",
+          "c2011": 118400,
+          "c2016": 116900,
+          "c2021": 114200
+        },
+        {
+          "metric": "Average farm area (acres)",
+          "c2011": 287,
+          "c2016": 307,
+          "c2021": 332
+        },
+        {
+          "metric": "Dairy operations",
+          "c2011": 121,
+          "c2016": 104,
+          "c2021": 88
+        },
+        {
+          "metric": "Oilseed and grain operations",
+          "c2011": 148,
+          "c2016": 156,
+          "c2021": 161
+        },
+        {
+          "metric": "Operators aged 55 and over",
+          "c2011": 268,
+          "c2016": 289,
+          "c2021": 301
+        }
       ],
-      "source": { "sourceId": "census-agriculture", "locator": "Farm and farm operator data" },
+      "source": {
+        "sourceId": "census-agriculture",
+        "locator": "Farm and farm operator data"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample",
       "note": "Operator counts and farm counts are different denominators — a farm may report more than one operator."
@@ -262,21 +745,78 @@
       "geography": "Township of North Glengarry",
       "tier": "township",
       "columns": [
-        { "key": "type", "label": "Permit type", "align": "left" },
-        { "key": "count", "label": "Permits", "format": "number", "align": "right" },
-        { "key": "units", "label": "Dwelling units", "format": "number", "align": "right" },
-        { "key": "value", "label": "Declared value", "format": "currency", "align": "right" }
+        {
+          "key": "type",
+          "label": "Permit type",
+          "align": "left"
+        },
+        {
+          "key": "count",
+          "label": "Permits",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "units",
+          "label": "Dwelling units",
+          "format": "number",
+          "align": "right"
+        },
+        {
+          "key": "value",
+          "label": "Declared value",
+          "format": "currency",
+          "align": "right"
+        }
       ],
       "rows": [
-        { "type": "New residential, single detached", "count": 31, "units": 31, "value": 12400000 },
-        { "type": "New residential, multi-unit", "count": 2, "units": 14, "value": 3900000 },
-        { "type": "Residential addition and renovation", "count": 71, "units": 0, "value": 2800000 },
-        { "type": "Agricultural", "count": 24, "units": 0, "value": 2100000 },
-        { "type": "Commercial", "count": 9, "units": 0, "value": 980000 },
-        { "type": "Industrial", "count": 3, "units": 0, "value": 420000 },
-        { "type": "Institutional and other", "count": 5, "units": 0, "value": 100000 }
+        {
+          "type": "New residential, single detached",
+          "count": 31,
+          "units": 31,
+          "value": 12400000
+        },
+        {
+          "type": "New residential, multi-unit",
+          "count": 2,
+          "units": 14,
+          "value": 3900000
+        },
+        {
+          "type": "Residential addition and renovation",
+          "count": 71,
+          "units": 0,
+          "value": 2800000
+        },
+        {
+          "type": "Agricultural",
+          "count": 24,
+          "units": 0,
+          "value": 2100000
+        },
+        {
+          "type": "Commercial",
+          "count": 9,
+          "units": 0,
+          "value": 980000
+        },
+        {
+          "type": "Industrial",
+          "count": 3,
+          "units": 0,
+          "value": 420000
+        },
+        {
+          "type": "Institutional and other",
+          "count": 5,
+          "units": 0,
+          "value": 100000
+        }
       ],
-      "source": { "sourceId": "building-permits", "locator": "Chief Building Official annual report" },
+      "source": {
+        "sourceId": "building-permits",
+        "locator": "Chief Building Official annual report"
+      },
       "lastUpdated": "2026-08-01",
       "provenance": "sample"
     }

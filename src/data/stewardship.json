@@ -67,7 +67,7 @@
     "reading": [
       { "sourceId": "amp", "locator": "Lifecycle funding analysis; levels of service statement", "why": "The requirement, the assumptions behind it, and the service levels it is sized to sustain. Read the levels of service section first: it determines what the gap is a gap against." },
       { "sourceId": "amp-appendices", "why": "Per-asset detail behind the class totals. This is where a gap concentrated in a small number of assets becomes visible as such." },
-      { "sourceId": "budget-current", "locator": "Capital budget and forecast", "why": "The planned side of the subtraction. Count only renewal and replacement lines; growth and new assets are a different question." },
+      { "sourceId": "budget-2025", "locator": "Capital budget and forecast", "why": "The planned side of the subtraction. Count only renewal and replacement lines; growth and new assets are a different question." },
       { "sourceId": "fir", "locator": "Schedule 60", "why": "Reserve continuity. Whether renewal is being funded from current taxation or from accumulated balances." },
       { "sourceId": "roads-needs-study", "why": "Roads are the largest class by value. Condition assessment dates determine whether the roads component of the requirement is current." }
     ],
@@ -185,7 +185,7 @@
       { "sourceId": "fir", "locator": "Schedule 10", "why": "Levy and total revenue on a consistent multi-year basis." },
       { "sourceId": "mpac-roll", "why": "Assessment by class and the valuation date. Read the valuation date before the values." },
       { "sourceId": "county-budget", "why": "The county levy and how it is apportioned. The portion of the bill township council votes on at a different table." },
-      { "sourceId": "budget-current", "why": "The plan behind the levy: what the increase was raised to fund." }
+      { "sourceId": "budget-2025", "why": "The plan behind the levy: what the increase was raised to fund." }
     ],
     "questions": [
       "What proportion of a typical North Glengarry tax bill is township, county, and education, and how has each moved over five years?",
@@ -584,7 +584,7 @@
     "reading": [
       { "sourceId": "strategic-plan", "why": "The priorities as written, and the measures where they exist. Note which priorities are stated as outcomes and which as activities — the distinction determines whether a measure is even possible." },
       { "sourceId": "council-agendas", "locator": "Report accompanying strategic plan adoption", "why": "What was recommended, what council changed, and whether measurement was discussed." },
-      { "sourceId": "budget-current", "why": "Whether budget decisions are presented against strategic priorities or independently of them. This is the practical test of whether a plan is operative." }
+      { "sourceId": "budget-2025", "why": "Whether budget decisions are presented against strategic priorities or independently of them. This is the practical test of whether a plan is operative." }
     ],
     "questions": [
       "For each strategic priority without a measure, what would a reasonable measure be, and is the data to support it already collected?",
@@ -680,7 +680,7 @@
       { "sourceId": "fir", "locator": "Schedule 60", "why": "Reserve continuity: opening balance, contributions, withdrawals, closing balance. The withdrawals line is the one to follow." },
       { "sourceId": "audited-fs", "locator": "Note on reserves and reserve funds", "why": "Reserves by purpose and the discretionary versus obligatory split the return does not show." },
       { "sourceId": "fir", "locator": "Annual Repayment Limit statement", "why": "The ministry's own calculation of borrowing room. Use it rather than recomputing." },
-      { "sourceId": "budget-current", "why": "Planned contributions to and withdrawals from reserves for the current year." },
+      { "sourceId": "budget-2025", "why": "Planned contributions to and withdrawals from reserves for the current year." },
       { "sourceId": "amp", "locator": "Lifecycle funding analysis", "why": "What the reserve position needs to be able to fund. Reserves are only adequate or inadequate relative to a renewal requirement." }
     ],
     "questions": [
