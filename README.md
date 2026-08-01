@@ -56,6 +56,40 @@ from `npm run validate`. An unretrieved URL is a lead, not a citation. Opening
 each one, confirming it resolves to the document described, capturing a stored
 copy, and setting `retrieved` is the first half of the source inventory audit.
 
+### Confirming them: `npm run check-sources`
+
+```bash
+npm run check-sources             # report only
+npm run check-sources -- --write  # record retrieved dates on the ones that resolved
+```
+
+Requests every unconfirmed URL and reports what came back. With `--write` it
+stamps `retrieved` against the ones that resolved. It distinguishes three
+outcomes, and the third is the one that matters:
+
+- **resolved** — something is served there, of the expected content type
+- **did not resolve** — the URL moved or the document was withdrawn
+- **blocked** — the request never left the network
+
+A blocked host is not a missing document, and conflating the two would corrupt
+the one artefact the requirements say must outlive everything else. When the
+egress policy denies a host the script writes nothing, exits non-zero, and
+prints the hosts to allow. Today that is all of them:
+
+```
+efis.fma.csc.gov.on.ca   midas.amo.on.ca        data.ontario.ca
+www.northglengarry.ca    www.sdgcounties.ca     www.mpac.ca
+open.canada.ca           www.pas.gov.on.ca      www12.statcan.gc.ca
+www150.statcan.gc.ca     www.ontario.ca         olt.gov.on.ca
+rrca.on.ca
+```
+
+Add those to the environment's network egress settings and re-run. A `200` is
+still not proof the document is what the library says it is — the script
+catches a CMS serving an HTML not-found page under a PDF URL, but not a PDF
+that turns out to be the wrong year. Open the ones you are about to transcribe
+from.
+
 Everything that is *not* a figure — the domain primers, the two-tier ownership splits, the
 methodology and geography notes, the stewardship questions, the source library entries and what
 to read each document for, the ninety day curriculum — is real content written for this project
