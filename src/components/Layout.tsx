@@ -86,6 +86,12 @@ export function Layout() {
           Version {meta.version} · Private to the sponsor and invited reviewers · Not a campaign
           asset
         </p>
+        <p className="foot-meta">
+          Handcrafted with ❤️ by{' '}
+          <a href="https://supersonicsites.com" target="_blank" rel="noreferrer">
+            Supersonic Sites
+          </a>
+        </p>
       </footer>
     </div>
   )
